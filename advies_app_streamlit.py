@@ -49,11 +49,14 @@ adviezen = {
 
 
 
+
 <b>💡 Tip:</b> Blijf rustig, benoem emoties.
 
 
 
+
 <b>😄 Knipoog:</b> Jij bent de kapitein, ook als het schip vuur spuwt.
+
 
 
 
@@ -74,9 +77,9 @@ adviezen = {
 💡 <b>💡 Tip:</b> Vaste routines, geen schermen voor het slapen.
 😄 <b>😄 Knipoog:</b> En daarna? Jij. Dekentje. Netflix.
 🔗 _Bron: Slaapslim.nl_"""},
-    "Angst": {"advies": """📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.
-💡 **Tip:** Neem het serieus. Rust en herhaling helpen.
-😄 **Knipoog:** En een zelfgemaakte anti-monsterspray natuurlijk.
+    "Angst": {"advies": """📚 <b>📚 Feit:</b> Angst is normaal, vooral bij nieuwe situaties.
+💡 <b>💡 Tip:</b> Neem het serieus. Rust en herhaling helpen.
+😄 <b>😄 Knipoog:</b> En een zelfgemaakte anti-monsterspray natuurlijk.
 🔗 _Bron: NJI_"""},
     "Pesten": {"advies": """📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.
 💡 **Tip:** Praat open. Werk samen met school.
