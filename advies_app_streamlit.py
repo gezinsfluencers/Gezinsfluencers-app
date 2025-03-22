@@ -49,7 +49,7 @@ st.markdown("""
     <img src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/assets/logo.png' width='120'><br>
     🎈 Gezinsfluencers Advies App
 </div>
-""", unsafe_allow_html=True)", unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies te krijgen – met een knipoog én stevige onderbouwing 😉</p>", unsafe_allow_html=True)
 
 # --- Adviezen en situaties (hersteld en uitgebreid) ---
