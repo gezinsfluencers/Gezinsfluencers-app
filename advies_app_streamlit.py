@@ -10,18 +10,18 @@ st.markdown("""
 <div style='text-align:center; margin-top:20px;'>
     <p><b>🎵 Speel een vrolijk muziekje:</b></p>
     <audio controls autoplay loop>
-  <source src='https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes_Music/Happy_Music/Scott_Holmes_Music_-_Happy_Whistling_Ukulele.mp3' type='audio/mpeg'>
+  <source src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3' type='audio/mpeg'>
   Je browser ondersteunt dit audio-element niet.
 </audio>
 </div>
 <style>
     .stApp {
-        background-color: #FFEBF0;
+        background-color: #FAD1DB;
         font-family: 'Comic Sans MS', cursive;
     }
     .title {
         text-align: center;
-        color: #D62F6B;
+        color: #A61C4B;
         font-size: 36px;
         font-weight: bold;
     }
@@ -37,8 +37,8 @@ st.markdown("""
         font-size: 16px;
     }
     .advies-box {
-        background-color: #FFFAF0;
-        border-left: 5px solid #F48FB1;
+        background-color: #F7C5D5;
+        border-left: 5px solid #C2185B;
         padding: 20px;
         font-size: 18px;
         margin-top: 20px;
