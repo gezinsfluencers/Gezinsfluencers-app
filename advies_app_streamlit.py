@@ -36,7 +36,7 @@ st.markdown("""
 st.markdown("<div class='title'>🎈 Gezinsfluencers Advies App</div>", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center;'>Klik op een situatie en krijg advies met een knipoog én een stevige onderbouwing 😉</p>", unsafe_allow_html=True)
 
-# Gedragingen + situaties met uitgebreide adviezen
+# Adviezen importeren uit extern bestand of uitbreiden hieronder
 adviezen = {
     "Driftbui": {"advies": "📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.\n💡 **Tip:** Blijf rustig, benoem emoties.\n😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.\n🔗 _Bron: NJI (2022)_"},
     "Niet luisteren": {"advies": "📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.\n💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.\n😄 **Knipoog:** Fluisteren werkt soms verrassend goed.\n🔗 _Bron: Triple P_"},
@@ -54,7 +54,11 @@ adviezen = {
     "Zegt 'ik ben dom'": {"advies": "📚 **Feit:** Kinderen spiegelen taal die ze horen.\n💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.\n😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.\n🔗 _Bron: Carol Dweck_"},
     "Kledingcrisis in de ochtend": {"advies": "📚 **Feit:** Keuzes geven = autonomie ontwikkelen.\n💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.\n😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.\n🔗 _Bron: Positief Opvoeden_"},
     "Discussie over schermtijd": {"advies": "📚 **Feit:** Te veel schermen = impact op slaap en gedrag.\n💡 **Tip:** Maak samen regels. Stel schermvrije zones.\n😄 **Knipoog:** En ja, jij ook. Oeps.\n🔗 _Bron: Mediaopvoeding.nl_"},
-    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.\n💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.\n😄 **Knipoog:** Jij bent de manager van team chaos.\n🔗 _Bron: Tischa Neve_"}
+    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.\n💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.\n😄 **Knipoog:** Jij bent de manager van team chaos.\n🔗 _Bron: Tischa Neve_"},
+    "Jaloers op broer of zus": {"advies": "📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.\n💡 **Tip:** Geef ieder kind exclusieve tijd. Benoem uniek gedrag.\n😄 **Knipoog:** Wie jaloers is mag de afwas doen.\n🔗 _Bron: Opvoedinformatie Nederland_"},
+    "Wil altijd winnen": {"advies": "📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.\n💡 **Tip:** Leer omgaan met verlies via spelletjes.\n😄 **Knipoog:** Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.\n🔗 _Bron: Pedagogisch Kader Spel_"},
+    "Moeite met afscheid nemen": {"advies": "📚 **Feit:** Hechting beïnvloedt afscheid nemen.\n💡 **Tip:** Gebruik rituelen, wees voorspelbaar.\n😄 **Knipoog:** Knuffel, zwaai, sprint. Niet omkijken.\n🔗 _Bron: Babywijzer.nl_"},
+    "Durft niet alleen te spelen": {"advies": "📚 **Feit:** Zelfstandig spelen vraagt oefening.\n💡 **Tip:** Begin met samen starten, daarna stukje terugtrekken.\n😄 **Knipoog:** Jij bent geen animatieteam.\n🔗 _Bron: Simpelopvoeden.nl_"}
 }
 
 # Zoekbalk
