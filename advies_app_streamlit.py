@@ -1,4 +1,4 @@
-# Gezinsfluencers Advies App - compleet met zoekfunctie, onderbouwing, knipoog en webshop-link
+# Gezinsfluencers Advies App - verbeterde zoekfunctie, grotere tekst en visuele structuur
 import streamlit as st
 import random
 
@@ -29,56 +29,132 @@ st.markdown("""
         margin-top: 30px;
         font-size: 16px;
     }
+    .advies-box {
+        background-color: #FFFAF0;
+        border-left: 5px solid #FFCC80;
+        padding: 20px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # Titel
 st.markdown("<div class='title'>🎈 Gezinsfluencers Advies App</div>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;'>Klik op een situatie en krijg advies met een knipoog én een stevige onderbouwing 😉</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies te krijgen – met een knipoog én stevige onderbouwing 😉</p>", unsafe_allow_html=True)
 
-# Adviezen importeren uit extern bestand of uitbreiden hieronder
+# --- Adviezen en situaties (hersteld en uitgebreid) ---
 adviezen = {
-    "Driftbui": {"advies": "📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.\n💡 **Tip:** Blijf rustig, benoem emoties.\n😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.\n🔗 _Bron: NJI (2022)_"},
-    "Niet luisteren": {"advies": "📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.\n💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.\n😄 **Knipoog:** Fluisteren werkt soms verrassend goed.\n🔗 _Bron: Triple P_"},
-    "Agressief gedrag": {"advies": "📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.\n💡 **Tip:** Stel grenzen met rust. Help met woorden geven aan boosheid.\n😄 **Knipoog:** Misschien een kussenbokssessie voor jullie allebei?\n🔗 _Bron: Tischa Neve_"},
-    "Concentratieproblemen": {"advies": "📚 **Feit:** Kinderen zijn vaak overprikkeld of niet uitgedaagd.\n💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.\n😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.\n🔗 _Bron: Kinderbrein.nl_"},
-    "Slaapproblemen": {"advies": "📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.\n💡 **Tip:** Vaste routines, geen schermen voor het slapen.\n😄 **Knipoog:** En daarna? Jij. Dekentje. Netflix.\n🔗 _Bron: Slaapslim.nl_"},
-    "Angst": {"advies": "📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.\n💡 **Tip:** Neem het serieus. Rust en herhaling helpen.\n😄 **Knipoog:** En een zelfgemaakte anti-monsterspray natuurlijk.\n🔗 _Bron: NJI_"},
-    "Pesten": {"advies": "📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.\n💡 **Tip:** Praat open. Werk samen met school.\n😄 **Knipoog:** En jij? Jij bent hun superheld op sokken.\n🔗 _Bron: Stichting Omgaan met Pesten_"},
-    "Snoep stelen": {"advies": "📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.\n💡 **Tip:** Leg rustig uit wat van wie is, laat herstellen.\n😄 **Knipoog:** FBI-material. Let maar op.\n🔗 _Bron: Opvoedinformatie.nl_"},
-    "Alles is 'saai'": {"advies": "📚 **Feit:** Verveling stimuleert creativiteit.\n💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.\n😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.\n🔗 _Bron: Ouders van Nu_"},
-    "100x 'Waarom?' vragen": {"advies": "📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.\n💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!\n😄 **Knipoog:** Waarom? Omdat jij het kan.\n🔗 _Bron: Het Kindontwikkelboek_"},
-    "Wil niet naar school": {"advies": "📚 **Feit:** Kan te maken hebben met spanning of sociale angst.\n💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.\n😄 **Knipoog:** Herinner ze aan de pauzehap.\n🔗 _Bron: NJI_"},
-    "Overprikkeld na school": {"advies": "📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.\n💡 **Tip:** Rust, geen vragen, even niks.\n😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.\n🔗 _Bron: Hooggevoelig.nl_"},
-    "Verveelt zich met 800 speelgoedjes": {"advies": "📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.\n💡 **Tip:** Roteer speelgoed. Minder is meer.\n😄 **Knipoog:** Of geef ze een wc-rol en zeg: 'Bedenk iets'.\n🔗 _Bron: Simpel opvoeden_"},
-    "Zegt 'ik ben dom'": {"advies": "📚 **Feit:** Kinderen spiegelen taal die ze horen.\n💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.\n😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.\n🔗 _Bron: Carol Dweck_"},
-    "Kledingcrisis in de ochtend": {"advies": "📚 **Feit:** Keuzes geven = autonomie ontwikkelen.\n💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.\n😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.\n🔗 _Bron: Positief Opvoeden_"},
-    "Discussie over schermtijd": {"advies": "📚 **Feit:** Te veel schermen = impact op slaap en gedrag.\n💡 **Tip:** Maak samen regels. Stel schermvrije zones.\n😄 **Knipoog:** En ja, jij ook. Oeps.\n🔗 _Bron: Mediaopvoeding.nl_"},
-    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.\n💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.\n😄 **Knipoog:** Jij bent de manager van team chaos.\n🔗 _Bron: Tischa Neve_"},
-    "Jaloers op broer of zus": {"advies": "📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.\n💡 **Tip:** Geef ieder kind exclusieve tijd. Benoem uniek gedrag.\n😄 **Knipoog:** Wie jaloers is mag de afwas doen.\n🔗 _Bron: Opvoedinformatie Nederland_"},
-    "Wil altijd winnen": {"advies": "📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.\n💡 **Tip:** Leer omgaan met verlies via spelletjes.\n😄 **Knipoog:** Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.\n🔗 _Bron: Pedagogisch Kader Spel_"},
-    "Moeite met afscheid nemen": {"advies": "📚 **Feit:** Hechting beïnvloedt afscheid nemen.\n💡 **Tip:** Gebruik rituelen, wees voorspelbaar.\n😄 **Knipoog:** Knuffel, zwaai, sprint. Niet omkijken.\n🔗 _Bron: Babywijzer.nl_"},
-    "Durft niet alleen te spelen": {"advies": "📚 **Feit:** Zelfstandig spelen vraagt oefening.\n💡 **Tip:** Begin met samen starten, daarna stukje terugtrekken.\n😄 **Knipoog:** Jij bent geen animatieteam.\n🔗 _Bron: Simpelopvoeden.nl_"}
+    "Driftbui": {"advies": "📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
+💡 **Tip:** Blijf rustig, benoem emoties.
+😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.
+🔗 _Bron: NJI (2022)_"},
+    "Niet luisteren": {"advies": "📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.
+💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.
+😄 **Knipoog:** Fluisteren werkt soms verrassend goed.
+🔗 _Bron: Triple P_"},
+    "Agressief gedrag": {"advies": "📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.
+💡 **Tip:** Stel grenzen met rust. Help met woorden geven aan boosheid.
+😄 **Knipoog:** Misschien een kussenbokssessie voor jullie allebei?
+🔗 _Bron: Tischa Neve_"},
+    "Concentratieproblemen": {"advies": "📚 **Feit:** Kinderen zijn vaak overprikkeld of niet uitgedaagd.
+💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.
+😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.
+🔗 _Bron: Kinderbrein.nl_"},
+    "Slaapproblemen": {"advies": "📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.
+💡 **Tip:** Vaste routines, geen schermen voor het slapen.
+😄 **Knipoog:** En daarna? Jij. Dekentje. Netflix.
+🔗 _Bron: Slaapslim.nl_"},
+    "Angst": {"advies": "📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.
+💡 **Tip:** Neem het serieus. Rust en herhaling helpen.
+😄 **Knipoog:** En een zelfgemaakte anti-monsterspray natuurlijk.
+🔗 _Bron: NJI_"},
+    "Pesten": {"advies": "📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.
+💡 **Tip:** Praat open. Werk samen met school.
+😄 **Knipoog:** En jij? Jij bent hun superheld op sokken.
+🔗 _Bron: Stichting Omgaan met Pesten_"},
+    "Snoep stelen": {"advies": "📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.
+💡 **Tip:** Leg rustig uit wat van wie is, laat herstellen.
+😄 **Knipoog:** FBI-material. Let maar op.
+🔗 _Bron: Opvoedinformatie.nl_"},
+    "Alles is 'saai'": {"advies": "📚 **Feit:** Verveling stimuleert creativiteit.
+💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.
+😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.
+🔗 _Bron: Ouders van Nu_"},
+    "100x 'Waarom?' vragen": {"advies": "📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.
+💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!
+😄 **Knipoog:** Waarom? Omdat jij het kan.
+🔗 _Bron: Het Kindontwikkelboek_"},
+    "Wil niet naar school": {"advies": "📚 **Feit:** Kan te maken hebben met spanning of sociale angst.
+💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.
+😄 **Knipoog:** Herinner ze aan de pauzehap.
+🔗 _Bron: NJI_"},
+    "Overprikkeld na school": {"advies": "📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.
+💡 **Tip:** Rust, geen vragen, even niks.
+😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.
+🔗 _Bron: Hooggevoelig.nl_"},
+    "Verveelt zich met 800 speelgoedjes": {"advies": "📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.
+💡 **Tip:** Roteer speelgoed. Minder is meer.
+😄 **Knipoog:** Of geef ze een wc-rol en zeg: 'Bedenk iets'.
+🔗 _Bron: Simpel opvoeden_"},
+    "Zegt 'ik ben dom'": {"advies": "📚 **Feit:** Kinderen spiegelen taal die ze horen.
+💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.
+😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.
+🔗 _Bron: Carol Dweck_"},
+    "Kledingcrisis in de ochtend": {"advies": "📚 **Feit:** Keuzes geven = autonomie ontwikkelen.
+💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.
+😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.
+🔗 _Bron: Positief Opvoeden_"},
+    "Discussie over schermtijd": {"advies": "📚 **Feit:** Te veel schermen = impact op slaap en gedrag.
+💡 **Tip:** Maak samen regels. Stel schermvrije zones.
+😄 **Knipoog:** En ja, jij ook. Oeps.
+🔗 _Bron: Mediaopvoeding.nl_"},
+    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.
+💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.
+😄 **Knipoog:** Jij bent de manager van team chaos.
+🔗 _Bron: Tischa Neve_"},
+    "Jaloers op broer of zus": {"advies": "📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.
+💡 **Tip:** Geef ieder kind exclusieve tijd. Benoem uniek gedrag.
+😄 **Knipoog:** Wie jaloers is mag de afwas doen.
+🔗 _Bron: Opvoedinformatie Nederland_"},
+    "Wil altijd winnen": {"advies": "📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.
+💡 **Tip:** Leer omgaan met verlies via spelletjes.
+😄 **Knipoog:** Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.
+🔗 _Bron: Pedagogisch Kader Spel_"},
+    "Moeite met afscheid nemen": {"advies": "📚 **Feit:** Hechting beïnvloedt afscheid nemen.
+💡 **Tip:** Gebruik rituelen, wees voorspelbaar.
+😄 **Knipoog:** Knuffel, zwaai, sprint. Niet omkijken.
+🔗 _Bron: Babywijzer.nl_"},
+    "Durft niet alleen te spelen": {"advies": "📚 **Feit:** Zelfstandig spelen vraagt oefening.
+💡 **Tip:** Begin met samen starten, daarna stukje terugtrekken.
+😄 **Knipoog:** Jij bent geen animatieteam.
+🔗 _Bron: Simpelopvoeden.nl_"}
 }
 
-# Zoekbalk
-st.subheader("Zoek een gedrag of situatie")
-zoekterm = st.text_input("Typ bijvoorbeeld: boos, school, slapen, dom, luisteren...")
-gevonden = [k for k in adviezen if zoekterm.lower() in k.lower() or zoekterm.lower() in adviezen[k]["advies"].lower()] if zoekterm else list(adviezen.keys())
-if gevonden:
-    keuze = st.selectbox("Kies uit de lijst", gevonden)
-else:
-    st.warning("Geen resultaten gevonden. Probeer een ander zoekwoord.")
-    keuze = None
+# Selectie uit lijst eerst
+situatie_lijst = list(adviezen.keys())
+keuze = st.selectbox("👇 Kies een gedrag of situatie", situatie_lijst)
 
-# Advies tonen
-if st.button("🎁 Geef mij advies") and keuze:
-    st.markdown(adviezen[keuze]["advies"])
+# Advies tonen vanuit lijstselectie
+if st.button("🎁 Geef mij advies"):
+    st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
 
 # Willekeurige tip
 if st.button("🎲 Verras me!"):
-    random_key = random.choice(list(adviezen.keys()))
-    st.markdown(adviezen[random_key]["advies"])
+    random_key = random.choice(situatie_lijst)
+    st.markdown(f"<div class='advies-box'>{adviezen[random_key]['advies']}</div>", unsafe_allow_html=True)
+
+# Zoekfunctie onderaan als extra optie
+with st.expander("🔍 Of zoek op een trefwoord"):
+    zoekterm = st.text_input("Typ bijvoorbeeld: boos, school, slapen, dom, luisteren...")
+    if zoekterm:
+        gevonden = [k for k in adviezen if zoekterm.lower() in k.lower() or zoekterm.lower() in adviezen[k]["advies"].lower()]
+        if gevonden:
+            keuze_zoek = st.selectbox("Gevonden situaties:", gevonden)
+            if st.button("Toon advies voor zoekresultaat"):
+                st.markdown(f"<div class='advies-box'>{adviezen[keuze_zoek]['advies']}</div>", unsafe_allow_html=True)
+        else:
+            st.warning("Geen resultaten gevonden. Probeer een ander woord.")
 
 # Webshop-link
 st.markdown("""
