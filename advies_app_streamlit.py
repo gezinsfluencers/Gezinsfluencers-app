@@ -7,6 +7,10 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 
 # Stijl
 st.markdown("""
+<audio controls autoplay loop>
+  <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type='audio/mpeg'>
+  Jouw browser ondersteunt dit audio-element niet.
+</audio>
 <style>
     .stApp {
         background-color: #FFF8F0;
@@ -40,7 +44,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Titel
-st.markdown("<div class='title'>🎈 Gezinsfluencers Advies App</div>", unsafe_allow_html=True)
+st.markdown("""
+<div class='title'>
+    <img src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/assets/logo.png' width='120'><br>
+    🎈 Gezinsfluencers Advies App
+</div>
+""", unsafe_allow_html=True)", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies te krijgen – met een knipoog én stevige onderbouwing 😉</p>", unsafe_allow_html=True)
 
 # --- Adviezen en situaties (hersteld en uitgebreid) ---
@@ -100,7 +109,7 @@ adviezen = {
 
 🔗 _Bron: Stichting Omgaan met Pesten_"""},
   
-    "Snoep stelen": {"advies": """<b>📚 Feit:</b> Jonge kinderen snappen eigendom nog niet goed.
+    "Spulletjes stelen": {"advies": """<b>📚 Feit:</b> Jonge kinderen snappen eigendom nog niet goed.
     
 <b>💡 Tip:</b> Leg rustig uit wat van wie is, laat herstellen.
 
