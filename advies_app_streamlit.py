@@ -45,7 +45,7 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 
 # --- Adviezen en situaties (hersteld en uitgebreid) ---
 adviezen = {
-    "Driftbui": {"advies": """""""📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
+    "Driftbui": {"advies": """📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 💡 **Tip:** Blijf rustig, benoem emoties.
 😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.
 🔗 _Bron: NJI (2022)_"""},
