@@ -159,7 +159,7 @@ with st.expander("🔍 Of zoek op een trefwoord"):
 # Webshop-link
 st.markdown("""
 <div class='webshop-link'>
-    🛍️ Bekijk ook onze <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>leuke producten voor ouders</a>!
+     Bekijk ook onze <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>leuke producten voor ouders</a>!
 </div>
 """, unsafe_allow_html=True)
 
