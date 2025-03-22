@@ -53,13 +53,21 @@ adviezen = {
 
 🔗 _Bron: NJI (2022)_"""},
     "Niet luisteren": {"advies": """<b>📚 Feit:</b> 'Niet luisteren' = overprikkeling/testgedrag.
+    
 <b>💡 Tip:</b> Korte zinnen, oogcontact, positieve feedback.
+
 <b>😄 Knipoog:</b> Fluisteren werkt soms verrassend goed.
+
 🔗 _Bron: Triple P_"""},
+  
     "Agressief gedrag": {"advies": """<b>📚 Feit:</b> Kan voortkomen uit onmacht of prikkelgevoeligheid.
+    
 <b>💡 Tip:</b> Stel grenzen met rust. Help met woorden geven aan boosheid.
+
 <b>😄 Knipoog:</b> Misschien een kussenbokssessie voor jullie allebei?
+
 🔗 _Bron: Tischa Neve_"""},
+  
     "Concentratieproblemen": {"advies": """<b>📚 Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.
 <b>💡 Tip:</b> Bied structuur, korte taken en beweging tussendoor.
 <b>😄 Knipoog:</b> Korte pauze = dansen op de woonkamerbank.
