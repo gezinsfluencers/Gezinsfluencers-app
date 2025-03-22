@@ -157,11 +157,7 @@ with st.expander("🔍 Of zoek op een trefwoord"):
             st.warning("Geen resultaten gevonden. Probeer een ander woord.")
 
 # Webshop-link
-st.markdown("""
-<div class='webshop-link'>
-     Bekijk ook onze <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>leuke producten voor ouders</a>!
-</div>
-""", unsafe_allow_html=True)
+st.markdown("<div class='webshop-link'>Bekijk ook onze <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>leuke producten voor ouders</a>!</div>", unsafe_allow_html=True)
 
 # Footer
 st.markdown("<div class='footer'>© 2025 Gezinsfluencers | Advies met een knipoog én inhoud</div>", unsafe_allow_html=True)
