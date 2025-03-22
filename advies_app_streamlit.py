@@ -230,7 +230,7 @@ if st.button("🎲 Verras me!"):
     </audio>
     """, unsafe_allow_html=True)
     random_key = random.choice(situatie_lijst)
-    st.markdown(f"<div class='advies-box'>{adviezen[random_key]['advies']}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='advies-box'><b>{random_key}</b><br><br>{adviezen[random_key]['advies']}</div>", unsafe_allow_html=True)
 
 # Zoekfunctie onderaan als extra optie
 with st.expander("🔍 Of zoek op een trefwoord"):
