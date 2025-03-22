@@ -64,7 +64,7 @@ adviezen = {
 # Zoekbalk
 st.subheader("Zoek een gedrag of situatie")
 zoekterm = st.text_input("Typ bijvoorbeeld: boos, school, slapen, dom, luisteren...")
-gevonden = [k for k in adviezen.keys() if zoekterm.lower() in k.lower()] if zoekterm else list(adviezen.keys())
+gevonden = [k for k in adviezen if zoekterm.lower() in k.lower() or zoekterm.lower() in adviezen[k]["advies"].lower()] if zoekterm else list(adviezen.keys())
 if gevonden:
     keuze = st.selectbox("Kies uit de lijst", gevonden)
 else:
