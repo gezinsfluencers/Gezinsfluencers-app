@@ -1,23 +1,54 @@
+# Gezinsfluencers Advies App - uitgebreide versie met stijling en extra functies
 import streamlit as st
+import random
 
-st.set_page_config(page_title="Gezinsfluencers Advies", layout="centered")
+# --- Pagina instellingen ---
+st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 
-st.markdown(
-    "<h1 style='text-align: center; color: #FF69B4;'>🎈Gezinsfluencers Advies App</h1>", 
-    unsafe_allow_html=True
-)
-st.markdown("<p style='text-align: center;'>Klik op een gedrag of situatie en krijg direct advies (met een knipoog 😉)</p>", unsafe_allow_html=True)
+# --- Kleuren en stijl ---
+PRIMARY_COLOR = "#4E342E"  # donkerbruin
+ACCENT_COLOR = "#FFCC80"   # warm oranje
+BG_COLOR = "#F5F5DC"        # beige achtergrond
 
-opties = [
-    "Driftbui", "Niet luisteren", "Agressief gedrag", "Concentratieproblemen",
-    "Slaapproblemen", "Angst", "Pesten", "Snoep stelen", "Alles is 'saai'",
-    "100x 'Waarom?' vragen", "Wil niet naar school", "Kledingcrisis in de ochtend",
-    "Discussie over schermtijd", "Alles duurt 100 jaar", "Geen groente willen eten",
-    "Ligt op de grond in de supermarkt", "Kind denkt dat hij de baas is",
-    "Altijd trek in iets ongezonds", "Verveelt zich met 800 speelgoedjes",
-    "Onverklaarbaar hyper om 22:00 uur"
-]
+st.markdown(f"""
+    <style>
+    .stApp {{
+        background-color: {BG_COLOR};
+        font-family: 'Comic Sans MS', cursive;
+    }}
+    .title-style {{
+        color: {PRIMARY_COLOR};
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }}
+    .footer-style {{
+        text-align: center;
+        font-size: 14px;
+        color: grey;
+        margin-top: 50px;
+    }}
+    </style>
+""", unsafe_allow_html=True)
 
+# --- Titels ---
+st.markdown("<div class='title-style'>🎈 Gezinsfluencers Advies App</div>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;'>Kies een gedrag of situatie en krijg advies met een knipoog 😉</p>", unsafe_allow_html=True)
+
+# --- Thema's en gedragingen ---
+thema_dict = {
+    "Gedrag": ["Driftbui", "Niet luisteren", "Agressief gedrag", "Kind denkt dat hij de baas is"],
+    "School": ["Concentratieproblemen", "Wil niet naar school", "Pesten"],
+    "Slapen": ["Slaapproblemen", "Onverklaarbaar hyper om 22:00 uur"],
+    "Dagelijks gedoe": [
+        "Kledingcrisis in de ochtend", "Discussie over schermtijd", "Alles duurt 100 jaar",
+        "Geen groente willen eten", "Alles is 'saai'", "100x 'Waarom?' vragen",
+        "Snoep stelen", "Verveelt zich met 800 speelgoedjes", "Ligt op de grond in de supermarkt",
+        "Altijd trek in iets ongezonds", "Angst"
+    ]
+}
+
+# --- Adviezen ---
 adviezen = {
     "Driftbui": "Blijf kalm. Jij bent de kapitein op het schip. Ook als het schip vuur spuwt.",
     "Niet luisteren": "Zet een gek stemmetje op. Plotseling ben je weer razend interessant.",
@@ -41,11 +72,27 @@ adviezen = {
     "Onverklaarbaar hyper om 22:00 uur": "Spring mee. Of fluister ‘slaapfeest’... en sluit de deur langzaam."
 }
 
-keuze = st.selectbox("👇 Kies een gedrag of situatie", opties)
+# --- Thema kiezen ---
+st.subheader("Stap 1: Kies een thema")
+thema = st.selectbox("", list(thema_dict.keys()))
 
+# --- Gedrag kiezen ---
+st.subheader("Stap 2: Kies een gedrag of situatie")
+gedrag = st.selectbox("", thema_dict[thema])
+
+# --- Extra invoerveld ---
+st.text_input("Wil je iets toevoegen aan deze situatie?", placeholder="Bijv. Dit gebeurt elke ochtend 😩")
+
+# --- Toon advies ---
 if st.button("🎁 Geef mij advies!"):
-    st.markdown(f"### 💬 Advies bij: *{keuze}*")
-    st.success(adviezen.get(keuze, "Geen advies beschikbaar... Bel een opa of oma 😅"))
+    st.markdown(f"### 💬 Advies bij: *{gedrag}*")
+    st.success(adviezen.get(gedrag, "Geen advies beschikbaar... Bel een opa of oma 😅"))
 
-st.markdown("---")
-st.markdown("<p style='text-align: center; font-size:12px;'>© 2025 Gezinsfluencers | Advies met een knipoog</p>", unsafe_allow_html=True)
+# --- Willekeurige verrassingstip ---
+if st.button("🎲 Verras me!"):
+    random_gedrag = random.choice(list(adviezen.keys()))
+    st.markdown(f"### 💬 Verrassingstip bij: *{random_gedrag}*")
+    st.info(adviezen[random_gedrag])
+
+# --- Footer ---
+st.markdown("<div class='footer-style'>© 2025 Gezinsfluencers | Advies met een knipoog</div>", unsafe_allow_html=True)
