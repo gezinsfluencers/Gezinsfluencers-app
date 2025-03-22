@@ -47,9 +47,12 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 adviezen = {
     "Driftbui": {"advies": """<b>📚 Feit:</b> Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 
+
 <b>💡 Tip:</b> Blijf rustig, benoem emoties.
 
+
 <b>😄 Knipoog:</b> Jij bent de kapitein, ook als het schip vuur spuwt.
+
 
 🔗 _Bron: NJI (2022)_"""""},
     "Niet luisteren": {"advies": """<b>📚 Feit:</b> 'Niet luisteren' = overprikkeling/testgedrag.
@@ -60,9 +63,9 @@ adviezen = {
 <b>💡 Tip:</b> Stel grenzen met rust. Help met woorden geven aan boosheid.
 <b>😄 Knipoog:</b> Misschien een kussenbokssessie voor jullie allebei?
 🔗 _Bron: Tischa Neve_"""},
-    "Concentratieproblemen": {"advies": """📚 **Feit:** Kinderen zijn vaak overprikkeld of niet uitgedaagd.
-💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.
-😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.
+    "Concentratieproblemen": {"advies": """📚 <b>📚 Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.
+💡 <b>💡 Tip:</b> Bied structuur, korte taken en beweging tussendoor.
+😄 <b>😄 Knipoog:</b> Korte pauze = dansen op de woonkamerbank.
 🔗 _Bron: Kinderbrein.nl_"""},
     "Slaapproblemen": {"advies": """📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.
 💡 **Tip:** Vaste routines, geen schermen voor het slapen.
