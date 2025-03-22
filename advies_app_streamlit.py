@@ -65,10 +65,14 @@ adviezen = {
 st.subheader("Zoek een gedrag of situatie")
 zoekterm = st.text_input("Typ bijvoorbeeld: boos, school, slapen, dom, luisteren...")
 gevonden = [k for k in adviezen.keys() if zoekterm.lower() in k.lower()] if zoekterm else list(adviezen.keys())
-keuze = st.selectbox("Kies uit de lijst", gevonden)
+if gevonden:
+    keuze = st.selectbox("Kies uit de lijst", gevonden)
+else:
+    st.warning("Geen resultaten gevonden. Probeer een ander zoekwoord.")
+    keuze = None
 
 # Advies tonen
-if st.button("🎁 Geef mij advies"):
+if st.button("🎁 Geef mij advies") and keuze:
     st.markdown(adviezen[keuze]["advies"])
 
 # Willekeurige tip
