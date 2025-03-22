@@ -7,9 +7,7 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 
 # Stijl
 st.markdown("""
-<audio autoplay loop style="display:none;">
-  <source src="https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3" type="audio/mpeg">
-</audio>
+
 <style>
     .stApp {
         background-color: #FAD1DB;
@@ -217,10 +215,20 @@ keuze = st.selectbox("👇 Kies een gedrag of situatie", situatie_lijst)
 
 # Advies tonen vanuit lijstselectie
 if st.button("🎁 Geef mij advies"):
+    st.markdown("""
+    <audio autoplay loop style='display:none;'>
+      <source src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3' type='audio/mpeg'>
+    </audio>
+    """, unsafe_allow_html=True)
     st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
 
 # Willekeurige tip
 if st.button("🎲 Verras me!"):
+    st.markdown("""
+    <audio autoplay loop style='display:none;'>
+      <source src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3' type='audio/mpeg'>
+    </audio>
+    """, unsafe_allow_html=True)
     random_key = random.choice(situatie_lijst)
     st.markdown(f"<div class='advies-box'>{adviezen[random_key]['advies']}</div>", unsafe_allow_html=True)
 
