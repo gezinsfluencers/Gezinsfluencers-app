@@ -48,7 +48,7 @@ adviezen = {
     "Driftbui": {"advies": """📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 💡 **Tip:** Blijf rustig, benoem emoties.
 😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.
-🔗 _Bron: NJI (2022)_"""},
+🔗 _Bron: NJI (2022)_"""""},
     "Niet luisteren": {"advies": """📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.
 💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.
 😄 **Knipoog:** Fluisteren werkt soms verrassend goed.
@@ -85,11 +85,11 @@ adviezen = {
 💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!
 😄 **Knipoog:** Waarom? Omdat jij het kan.
 🔗 _Bron: Het Kindontwikkelboek_"""},
-    "Wil niet naar school": {"advies": "📚 **Feit:** Kan te maken hebben met spanning of sociale angst.
+    "Wil niet naar school": {"advies": """📚 **Feit:** Kan te maken hebben met spanning of sociale angst.
 💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.
 😄 **Knipoog:** Herinner ze aan de pauzehap.
-🔗 _Bron: NJI_"},
-    "Overprikkeld na school": {"advies": "📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.
+🔗 _Bron: NJI_"""},
+    "Overprikkeld na school": {"advies": """📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.
 💡 **Tip:** Rust, geen vragen, even niks.
 😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.
 🔗 _Bron: Hooggevoelig.nl_"},
