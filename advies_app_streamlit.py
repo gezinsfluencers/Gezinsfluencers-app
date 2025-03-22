@@ -92,43 +92,43 @@ adviezen = {
     "Overprikkeld na school": {"advies": """📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.
 💡 **Tip:** Rust, geen vragen, even niks.
 😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.
-🔗 _Bron: Hooggevoelig.nl_"},
-    "Verveelt zich met 800 speelgoedjes": {"advies": "📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.
+🔗 _Bron: Hooggevoelig.nl_"""},
+    "Verveelt zich met 800 speelgoedjes": {"advies": """📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.
 💡 **Tip:** Roteer speelgoed. Minder is meer.
 😄 **Knipoog:** Of geef ze een wc-rol en zeg: 'Bedenk iets'.
-🔗 _Bron: Simpel opvoeden_"},
-    "Zegt 'ik ben dom'": {"advies": "📚 **Feit:** Kinderen spiegelen taal die ze horen.
+🔗 _Bron: Simpel opvoeden_"""},
+    "Zegt 'ik ben dom'": {"advies": """📚 **Feit:** Kinderen spiegelen taal die ze horen.
 💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.
 😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.
-🔗 _Bron: Carol Dweck_"},
-    "Kledingcrisis in de ochtend": {"advies": "📚 **Feit:** Keuzes geven = autonomie ontwikkelen.
+🔗 _Bron: Carol Dweck_"""},
+    "Kledingcrisis in de ochtend": {"advies": """📚 **Feit:** Keuzes geven = autonomie ontwikkelen.
 💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.
 😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.
-🔗 _Bron: Positief Opvoeden_"},
-    "Discussie over schermtijd": {"advies": "📚 **Feit:** Te veel schermen = impact op slaap en gedrag.
+🔗 _Bron: Positief Opvoeden_"""},
+    "Discussie over schermtijd": {"advies": """📚 **Feit:** Te veel schermen = impact op slaap en gedrag.
 💡 **Tip:** Maak samen regels. Stel schermvrije zones.
 😄 **Knipoog:** En ja, jij ook. Oeps.
-🔗 _Bron: Mediaopvoeding.nl_"},
-    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.
+🔗 _Bron: Mediaopvoeding.nl_"""},
+    "Kind denkt dat hij de baas is": {"advies": """📚 **Feit:** Kinderen testen grenzen, dat is normaal.
 💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.
 😄 **Knipoog:** Jij bent de manager van team chaos.
-🔗 _Bron: Tischa Neve_"},
-    "Jaloers op broer of zus": {"advies": "📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.
+🔗 _Bron: Tischa Neve_"""},
+    "Jaloers op broer of zus": {"advies": """📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.
 💡 **Tip:** Geef ieder kind exclusieve tijd. Benoem uniek gedrag.
 😄 **Knipoog:** Wie jaloers is mag de afwas doen.
-🔗 _Bron: Opvoedinformatie Nederland_"},
-    "Wil altijd winnen": {"advies": "📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.
+🔗 _Bron: Opvoedinformatie Nederland_"""},
+    "Wil altijd winnen": {"advies": """📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.
 💡 **Tip:** Leer omgaan met verlies via spelletjes.
 😄 **Knipoog:** Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.
-🔗 _Bron: Pedagogisch Kader Spel_"},
-    "Moeite met afscheid nemen": {"advies": "📚 **Feit:** Hechting beïnvloedt afscheid nemen.
+🔗 _Bron: Pedagogisch Kader Spel_"""},
+    "Moeite met afscheid nemen": {"advies": """📚 **Feit:** Hechting beïnvloedt afscheid nemen.
 💡 **Tip:** Gebruik rituelen, wees voorspelbaar.
 😄 **Knipoog:** Knuffel, zwaai, sprint. Niet omkijken.
-🔗 _Bron: Babywijzer.nl_"},
-    "Durft niet alleen te spelen": {"advies": "📚 **Feit:** Zelfstandig spelen vraagt oefening.
+🔗 _Bron: Babywijzer.nl_"""},
+    "Durft niet alleen te spelen": {"advies": """📚 **Feit:** Zelfstandig spelen vraagt oefening.
 💡 **Tip:** Begin met samen starten, daarna stukje terugtrekken.
 😄 **Knipoog:** Jij bent geen animatieteam.
-🔗 _Bron: Simpelopvoeden.nl_"}
+🔗 _Bron: Simpelopvoeden.nl_"""}
 }
 
 # Selectie uit lijst eerst
