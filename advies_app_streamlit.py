@@ -7,10 +7,13 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 
 # Stijl
 st.markdown("""
-<audio controls autoplay loop>
-  <source src='https://cdn.pixabay.com/audio/2022/10/30/audio_c5d75b30c5.mp3' type='audio/mpeg'>
-  Jouw browser ondersteunt dit audio-element niet.
-</audio>
+<div style='text-align:center; margin-top:20px;'>
+    <p><b>🎵 Speel een vrolijk muziekje:</b></p>
+    <audio controls>
+      <source src='https://cdn.pixabay.com/download/audio/2023/03/28/audio_3bce848b13.mp3?filename=kids-playful-happy-142021.mp3' type='audio/mpeg'>
+      Je browser ondersteunt dit audio-element niet.
+    </audio>
+</div>
 <style>
     .stApp {
         background-color: #FFF8F0;
@@ -46,7 +49,7 @@ st.markdown("""
 # Titel
 st.markdown("""
 <div class='title'>
-    <img src='https://www.gezinsfluencers.nl/wp-content/uploads/2024/03/logo-gezinsfluencers.png' width='120'><br>
+    <img src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/logo-gezinsfluencers.png' width='120'><br>
     🎈 Gezinsfluencers Advies App
 </div>
 """, unsafe_allow_html=True)
