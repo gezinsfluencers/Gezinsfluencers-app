@@ -81,10 +81,10 @@ adviezen = {
 💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.
 😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.
 🔗 _Bron: Ouders van Nu_"""},
-    "100x 'Waarom?' vragen": {"advies": "📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.
+    "100x 'Waarom?' vragen": {"advies": """📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.
 💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!
 😄 **Knipoog:** Waarom? Omdat jij het kan.
-🔗 _Bron: Het Kindontwikkelboek_"},
+🔗 _Bron: Het Kindontwikkelboek_"""},
     "Wil niet naar school": {"advies": "📚 **Feit:** Kan te maken hebben met spanning of sociale angst.
 💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.
 😄 **Knipoog:** Herinner ze aan de pauzehap.
