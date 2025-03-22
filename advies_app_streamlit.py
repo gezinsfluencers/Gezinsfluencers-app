@@ -52,9 +52,9 @@ adviezen = {
 <b>😄 Knipoog:</b> Jij bent de kapitein, ook als het schip vuur spuwt.
 
 🔗 _Bron: NJI (2022)_"""""},
-    "Niet luisteren": {"advies": """📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.
-💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.
-😄 **Knipoog:** Fluisteren werkt soms verrassend goed.
+    "Niet luisteren": {"advies": """<b>📚 Feit:</b> 'Niet luisteren' = overprikkeling/testgedrag.
+<b>💡 Tip:</b> Korte zinnen, oogcontact, positieve feedback.
+<b>😄 Knipoog:</b> Fluisteren werkt soms verrassend goed.
 🔗 _Bron: Triple P_"""},
     "Agressief gedrag": {"advies": """📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.
 💡 **Tip:** Stel grenzen met rust. Help met woorden geven aan boosheid.
