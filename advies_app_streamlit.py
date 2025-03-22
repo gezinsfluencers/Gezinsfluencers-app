@@ -47,20 +47,11 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 adviezen = {
     "Driftbui": {"advies": """<b>📚 Feit:</b> Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 
-
-
-
 <b>💡 Tip:</b> Blijf rustig, benoem emoties.
-
-
-
 
 <b>😄 Knipoog:</b> Jij bent de kapitein, ook als het schip vuur spuwt.
 
-
-
-
-🔗 _Bron: NJI (2022)_"""""},
+🔗 _Bron: NJI (2022)_"""},
     "Niet luisteren": {"advies": """<b>📚 Feit:</b> 'Niet luisteren' = overprikkeling/testgedrag.
 <b>💡 Tip:</b> Korte zinnen, oogcontact, positieve feedback.
 <b>😄 Knipoog:</b> Fluisteren werkt soms verrassend goed.
@@ -69,77 +60,77 @@ adviezen = {
 <b>💡 Tip:</b> Stel grenzen met rust. Help met woorden geven aan boosheid.
 <b>😄 Knipoog:</b> Misschien een kussenbokssessie voor jullie allebei?
 🔗 _Bron: Tischa Neve_"""},
-    "Concentratieproblemen": {"advies": """📚 <b>📚 Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.
-💡 <b>💡 Tip:</b> Bied structuur, korte taken en beweging tussendoor.
-😄 <b>😄 Knipoog:</b> Korte pauze = dansen op de woonkamerbank.
+    "Concentratieproblemen": {"advies": """<b>📚 Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.
+<b>💡 Tip:</b> Bied structuur, korte taken en beweging tussendoor.
+<b>😄 Knipoog:</b> Korte pauze = dansen op de woonkamerbank.
 🔗 _Bron: Kinderbrein.nl_"""},
-    "Slaapproblemen": {"advies": """📚 <b>📚 Feit:</b> Slaappatronen ontwikkelen zich tot 6 jaar.
-💡 <b>💡 Tip:</b> Vaste routines, geen schermen voor het slapen.
-😄 <b>😄 Knipoog:</b> En daarna? Jij. Dekentje. Netflix.
+    "Slaapproblemen": {"advies": """<b>📚 Feit:</b> Slaappatronen ontwikkelen zich tot 6 jaar.
+<b>💡 Tip:</b> Vaste routines, geen schermen voor het slapen.
+<b>😄 Knipoog:</b> En daarna? Jij. Dekentje. Netflix.
 🔗 _Bron: Slaapslim.nl_"""},
     "Angst": {"advies": """📚 <b>📚 Feit:</b> Angst is normaal, vooral bij nieuwe situaties.
 💡 <b>💡 Tip:</b> Neem het serieus. Rust en herhaling helpen.
 😄 <b>😄 Knipoog:</b> En een zelfgemaakte anti-monsterspray natuurlijk.
 🔗 _Bron: NJI_"""},
-    "Pesten": {"advies": """📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.
-💡 **Tip:** Praat open. Werk samen met school.
-😄 **Knipoog:** En jij? Jij bent hun superheld op sokken.
+    "Pesten": {"advies": """<b>📚 Feit:</b> Heeft vaak impact op zelfbeeld en vertrouwen.
+<b>💡 Tip:</b> Praat open. Werk samen met school.
+<b>😄 Knipoog:</b> En jij? Jij bent hun superheld op sokken.
 🔗 _Bron: Stichting Omgaan met Pesten_"""},
-    "Snoep stelen": {"advies": """📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.
-💡 **Tip:** Leg rustig uit wat van wie is, laat herstellen.
-😄 **Knipoog:** FBI-material. Let maar op.
+    "Snoep stelen": {"advies": """<b>📚 Feit:</b> Jonge kinderen snappen eigendom nog niet goed.
+<b>💡 Tip:</b> Leg rustig uit wat van wie is, laat herstellen.
+<b>😄 Knipoog:</b> FBI-material. Let maar op.
 🔗 _Bron: Opvoedinformatie.nl_"""},
-    "Alles is 'saai'": {"advies": """📚 **Feit:** Verveling stimuleert creativiteit.
-💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.
-😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.
+    "Alles is 'saai'": {"advies": """📚 <b>📚 Feit:</b> Verveling stimuleert creativiteit.
+💡 <b>💡 Tip:</b> Bied niks aan. Laat ze zélf iets bedenken.
+😄 <b>😄 Knipoog:</b> Geef ze een wasmand. Succes gegarandeerd.
 🔗 _Bron: Ouders van Nu_"""},
-    "100x 'Waarom?' vragen": {"advies": """📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.
-💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!
-😄 **Knipoog:** Waarom? Omdat jij het kan.
+    "100x 'Waarom?' vragen": {"advies": """📚 <b>📚 Feit:</b> Dit is taalontwikkeling én aandacht zoeken.
+💡 <b>💡 Tip:</b> Stel de vraag terug. Of zet een timer: nog 3 vragen!
+😄 <b>😄 Knipoog:</b> Waarom? Omdat jij het kan.
 🔗 _Bron: Het Kindontwikkelboek_"""},
-    "Wil niet naar school": {"advies": """📚 **Feit:** Kan te maken hebben met spanning of sociale angst.
-💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.
-😄 **Knipoog:** Herinner ze aan de pauzehap.
+    "Wil niet naar school": {"advies": """📚 <b>📚 Feit:</b> Kan te maken hebben met spanning of sociale angst.
+💡 <b>💡 Tip:</b> Maak school voorspelbaar. Start rustig. Check met leerkracht.
+😄 <b>😄 Knipoog:</b> Herinner ze aan de pauzehap.
 🔗 _Bron: NJI_"""},
-    "Overprikkeld na school": {"advies": """📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.
-💡 **Tip:** Rust, geen vragen, even niks.
-😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.
+    "Overprikkeld na school": {"advies": """<b>📚 Feit:</b> Schooldagen zijn intens. Kinderen moeten ontladen.
+<b>💡 Tip:</b> Rust, geen vragen, even niks.
+<b>😄 Knipoog:</b> Laat ze gewoon uitrazen zoals jij na een lange werkdag.
 🔗 _Bron: Hooggevoelig.nl_"""},
-    "Verveelt zich met 800 speelgoedjes": {"advies": """📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.
-💡 **Tip:** Roteer speelgoed. Minder is meer.
-😄 **Knipoog:** Of geef ze een wc-rol en zeg: 'Bedenk iets'.
+    "Verveelt zich met 800 speelgoedjes": {"advies": """📚 <b>📚 Feit:</b> Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.
+💡 <b>💡 Tip:</b> Roteer speelgoed. Minder is meer.
+😄 <b>😄 Knipoog:</b> Of geef ze een wc-rol en zeg: 'Bedenk iets'.
 🔗 _Bron: Simpel opvoeden_"""},
-    "Zegt 'ik ben dom'": {"advies": """📚 **Feit:** Kinderen spiegelen taal die ze horen.
-💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.
-😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.
+    "Zegt 'ik ben dom'": {"advies": """<b>📚 Feit:</b> Kinderen spiegelen taal die ze horen.
+<b>💡 Tip:</b> Focus op inzet, niet resultaat. Complimenteer slim.
+<b>😄 Knipoog:</b> ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.
 🔗 _Bron: Carol Dweck_"""},
-    "Kledingcrisis in de ochtend": {"advies": """📚 **Feit:** Keuzes geven = autonomie ontwikkelen.
-💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.
-😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.
+    "Kledingcrisis in de ochtend": {"advies": """📚 <b>📚 Feit:</b> Keuzes geven = autonomie ontwikkelen.
+💡 <b>💡 Tip:</b> Laat 's avonds kiezen uit 2 outfits.
+😄 <b>😄 Knipoog:</b> Of gewoon crocs met glitterjurk. YOLO.
 🔗 _Bron: Positief Opvoeden_"""},
-    "Discussie over schermtijd": {"advies": """📚 **Feit:** Te veel schermen = impact op slaap en gedrag.
-💡 **Tip:** Maak samen regels. Stel schermvrije zones.
-😄 **Knipoog:** En ja, jij ook. Oeps.
+    "Discussie over schermtijd": {"advies": """<b>📚 Feit:</b> Te veel schermen = impact op slaap en gedrag.
+<b>💡 Tip:</b> Maak samen regels. Stel schermvrije zones.
+<b>😄 Knipoog:</b> En ja, jij ook. Oeps.
 🔗 _Bron: Mediaopvoeding.nl_"""},
-    "Kind denkt dat hij de baas is": {"advies": """📚 **Feit:** Kinderen testen grenzen, dat is normaal.
-💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.
-😄 **Knipoog:** Jij bent de manager van team chaos.
+    "Kind denkt dat hij de baas is": {"advies": """📚 <b>📚 Feit:</b> Kinderen testen grenzen, dat is normaal.
+💡 <b>💡 Tip:</b> Wees duidelijk en voorspelbaar. Gebruik humor.
+😄 <b>😄 Knipoog:</b> Jij bent de manager van team chaos.
 🔗 _Bron: Tischa Neve_"""},
-    "Jaloers op broer of zus": {"advies": """📚 **Feit:** Jaloezie komt voort uit aandacht en vergelijking.
-💡 **Tip:** Geef ieder kind exclusieve tijd. Benoem uniek gedrag.
-😄 **Knipoog:** Wie jaloers is mag de afwas doen.
+    "Jaloers op broer of zus": {"advies": """<b>📚 Feit:</b> Jaloezie komt voort uit aandacht en vergelijking.
+<b>💡 Tip:</b> Geef ieder kind exclusieve tijd. Benoem uniek gedrag.
+<b>😄 Knipoog:</b> Wie jaloers is mag de afwas doen.
 🔗 _Bron: Opvoedinformatie Nederland_"""},
-    "Wil altijd winnen": {"advies": """📚 **Feit:** Competitiedrang hoort bij de ontwikkeling van eigenwaarde.
-💡 **Tip:** Leer omgaan met verlies via spelletjes.
-😄 **Knipoog:** Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.
+    "Wil altijd winnen": {"advies": """📚 <b>📚 Feit:</b> Competitiedrang hoort bij de ontwikkeling van eigenwaarde.
+💡 <b>💡 Tip:</b> Leer omgaan met verlies via spelletjes.
+😄 <b>😄 Knipoog:</b> Zeg gewoon: 'Jij wint, ik ruim op'. Win-win.
 🔗 _Bron: Pedagogisch Kader Spel_"""},
-    "Moeite met afscheid nemen": {"advies": """📚 **Feit:** Hechting beïnvloedt afscheid nemen.
-💡 **Tip:** Gebruik rituelen, wees voorspelbaar.
-😄 **Knipoog:** Knuffel, zwaai, sprint. Niet omkijken.
+    "Moeite met afscheid nemen": {"advies": """<b>📚 Feit:</b> Hechting beïnvloedt afscheid nemen.
+<b>💡 Tip:</b> Gebruik rituelen, wees voorspelbaar.
+<b>😄 Knipoog:</b> Knuffel, zwaai, sprint. Niet omkijken.
 🔗 _Bron: Babywijzer.nl_"""},
-    "Durft niet alleen te spelen": {"advies": """📚 **Feit:** Zelfstandig spelen vraagt oefening.
-💡 **Tip:** Begin met samen starten, daarna stukje terugtrekken.
-😄 **Knipoog:** Jij bent geen animatieteam.
+    "Durft niet alleen te spelen": {"advies": """📚 <b>📚 Feit:</b> Zelfstandig spelen vraagt oefening.
+💡 <b>💡 Tip:</b> Begin met samen starten, daarna stukje terugtrekken.
+😄 <b>😄 Knipoog:</b> Jij bent geen animatieteam.
 🔗 _Bron: Simpelopvoeden.nl_"""}
 }
 
