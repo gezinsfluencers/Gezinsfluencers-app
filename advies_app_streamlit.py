@@ -9,19 +9,19 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 st.markdown("""
 <div style='text-align:center; margin-top:20px;'>
     <p><b>🎵 Speel een vrolijk muziekje:</b></p>
-    <audio controls>
-      <source src='https://cdn.pixabay.com/download/audio/2023/03/28/audio_3bce848b13.mp3?filename=kids-playful-happy-142021.mp3' type='audio/mpeg'>
-      Je browser ondersteunt dit audio-element niet.
-    </audio>
+    <audio controls autoplay loop>
+  <source src='https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes_Music/Happy_Music/Scott_Holmes_Music_-_Happy_Whistling_Ukulele.mp3' type='audio/mpeg'>
+  Je browser ondersteunt dit audio-element niet.
+</audio>
 </div>
 <style>
     .stApp {
-        background-color: #FFF8F0;
+        background-color: #FFEBF0;
         font-family: 'Comic Sans MS', cursive;
     }
     .title {
         text-align: center;
-        color: #4E342E;
+        color: #D62F6B;
         font-size: 36px;
         font-weight: bold;
     }
@@ -38,7 +38,7 @@ st.markdown("""
     }
     .advies-box {
         background-color: #FFFAF0;
-        border-left: 5px solid #FFCC80;
+        border-left: 5px solid #F48FB1;
         padding: 20px;
         font-size: 18px;
         margin-top: 20px;
