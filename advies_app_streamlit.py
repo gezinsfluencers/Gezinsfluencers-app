@@ -1,4 +1,4 @@
-# Gezinsfluencers Advies App - uitgebreid met zoekfunctie, feiten en humor
+# Gezinsfluencers Advies App - compleet met zoekfunctie, onderbouwing, knipoog en webshop-link
 import streamlit as st
 import random
 
@@ -24,6 +24,11 @@ st.markdown("""
         color: #888;
         margin-top: 50px;
     }
+    .webshop-link {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 16px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -31,37 +36,30 @@ st.markdown("""
 st.markdown("<div class='title'>🎈 Gezinsfluencers Advies App</div>", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center;'>Klik op een situatie en krijg advies met een knipoog én een stevige onderbouwing 😉</p>", unsafe_allow_html=True)
 
-# Gedragingen + situaties
+# Gedragingen + situaties met uitgebreide adviezen
 adviezen = {
-    "Driftbui": {
-        "advies": "📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie. Een driftbui is vaak een ontlading van overprikkeling.\n💡 **Tip:** Blijf zelf rustig. Benoem het gevoel ('Je bent boos omdat...'). Reageer pas ná de bui.\n😄 **Knipoog:** Jij bent de kapitein, ook als je schip vuur spuwt.\n🔗 _Bron: Nederlands Jeugdinstituut (2022)_"
-    },
-    "Niet luisteren": {
-        "advies": "📚 **Feit:** Kinderen filteren prikkels anders. 'Niet luisteren' is soms overbelasting of testgedrag.\n💡 **Tip:** Maak oogcontact, geef één opdracht tegelijk, gebruik positieve feedback.\n😄 **Knipoog:** Probeer eens fluisteren – gek genoeg gaan ze dan wél luisteren.\n🔗 _Bron: Triple P, Positief Opvoeden_"
-    },
-    "Schreeuwt als iets niet lukt": {
-        "advies": "📚 **Feit:** Frustratietolerantie ontwikkelt zich langzaam. Kinderen uiten onmacht met geluid.\n💡 **Tip:** Benoem het gevoel en model oplossingsgedrag: 'Laten we het samen opnieuw proberen'.\n😄 **Knipoog:** Jij hebt vast ook wel eens op 'Send' gedrukt voor je mail af was.\n🔗 _Bron: Tischa Neve, opvoedkundige_"
-    },
-    "Wil niet naar school": {
-        "advies": "📚 **Feit:** Schoolangst komt vaak door onzekerheid of sociale druk.\n💡 **Tip:** Praat rustig, gebruik visuele dagplannen en houd contact met school.\n😄 **Knipoog:** Herinner ze liefdevol aan de pauzehap en gymdag.\n🔗 _Bron: NJI - Onderwijs & Welzijn_"
-    },
-    "Onverklaarbaar hyper om 22:00 uur": {
-        "advies": "📚 **Feit:** Kinderen worden vaak hyper als ze oververmoeid raken.\n💡 **Tip:** Creëer een rustgevende slaaproutine met vaste afsluiting, zoals voorlezen.\n😄 **Knipoog:** Spring mee. Of fluister 'slaapfeest' en sluit de deur langzaam.\n🔗 _Bron: Slaapslim.nl_"
-    },
-    "Overprikkeld na school": {
-        "advies": "📚 **Feit:** Na school kunnen kinderen 'ontladen'. De rugzak zit vol met indrukken.\n💡 **Tip:** Laat ze even ontprikkelen zonder vragen. Denk aan muziek, knuffelen of bouwen.\n😄 **Knipoog:** Ook jij snauwt als je honger hebt en iemand vraagt waar de schaar is.\n🔗 _Bron: Het hooggevoelige kind - Elaine Aron_"
-    },
-    "Zegt 'ik ben dom'": {
-        "advies": "📚 **Feit:** Negatief zelfbeeld kan al jong ontstaan door (onbedoelde) feedback of vergelijking.\n💡 **Tip:** Benoem inzet, niet alleen resultaat. Stimuleer zelfvertrouwen via complimenten op gedrag.\n😄 **Knipoog:** Zeg: 'Dan ben ik de keizerin van dom – want ik heb ooit pindakaas in de vriezer gelegd.'\n🔗 _Bron: Carol Dweck – Growth Mindset_"
-    }
-    # ... hier kun je eenvoudig meer toevoegen in hetzelfde format
+    "Driftbui": {"advies": "📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.\n💡 **Tip:** Blijf rustig, benoem emoties.\n😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.\n🔗 _Bron: NJI (2022)_"},
+    "Niet luisteren": {"advies": "📚 **Feit:** 'Niet luisteren' = overprikkeling/testgedrag.\n💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.\n😄 **Knipoog:** Fluisteren werkt soms verrassend goed.\n🔗 _Bron: Triple P_"},
+    "Agressief gedrag": {"advies": "📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.\n💡 **Tip:** Stel grenzen met rust. Help met woorden geven aan boosheid.\n😄 **Knipoog:** Misschien een kussenbokssessie voor jullie allebei?\n🔗 _Bron: Tischa Neve_"},
+    "Concentratieproblemen": {"advies": "📚 **Feit:** Kinderen zijn vaak overprikkeld of niet uitgedaagd.\n💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.\n😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.\n🔗 _Bron: Kinderbrein.nl_"},
+    "Slaapproblemen": {"advies": "📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.\n💡 **Tip:** Vaste routines, geen schermen voor het slapen.\n😄 **Knipoog:** En daarna? Jij. Dekentje. Netflix.\n🔗 _Bron: Slaapslim.nl_"},
+    "Angst": {"advies": "📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.\n💡 **Tip:** Neem het serieus. Rust en herhaling helpen.\n😄 **Knipoog:** En een zelfgemaakte anti-monsterspray natuurlijk.\n🔗 _Bron: NJI_"},
+    "Pesten": {"advies": "📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.\n💡 **Tip:** Praat open. Werk samen met school.\n😄 **Knipoog:** En jij? Jij bent hun superheld op sokken.\n🔗 _Bron: Stichting Omgaan met Pesten_"},
+    "Snoep stelen": {"advies": "📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.\n💡 **Tip:** Leg rustig uit wat van wie is, laat herstellen.\n😄 **Knipoog:** FBI-material. Let maar op.\n🔗 _Bron: Opvoedinformatie.nl_"},
+    "Alles is 'saai'": {"advies": "📚 **Feit:** Verveling stimuleert creativiteit.\n💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.\n😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.\n🔗 _Bron: Ouders van Nu_"},
+    "100x 'Waarom?' vragen": {"advies": "📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.\n💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!\n😄 **Knipoog:** Waarom? Omdat jij het kan.\n🔗 _Bron: Het Kindontwikkelboek_"},
+    "Wil niet naar school": {"advies": "📚 **Feit:** Kan te maken hebben met spanning of sociale angst.\n💡 **Tip:** Maak school voorspelbaar. Start rustig. Check met leerkracht.\n😄 **Knipoog:** Herinner ze aan de pauzehap.\n🔗 _Bron: NJI_"},
+    "Overprikkeld na school": {"advies": "📚 **Feit:** Schooldagen zijn intens. Kinderen moeten ontladen.\n💡 **Tip:** Rust, geen vragen, even niks.\n😄 **Knipoog:** Laat ze gewoon uitrazen zoals jij na een lange werkdag.\n🔗 _Bron: Hooggevoelig.nl_"},
+    "Verveelt zich met 800 speelgoedjes": {"advies": "📚 **Feit:** Keuzestress en gewoonte maken speelgoed 'onzichtbaar'.\n💡 **Tip:** Roteer speelgoed. Minder is meer.\n😄 **Knipoog:** Of geef ze een wc-rol en zeg: 'Bedenk iets'.\n🔗 _Bron: Simpel opvoeden_"},
+    "Zegt 'ik ben dom'": {"advies": "📚 **Feit:** Kinderen spiegelen taal die ze horen.\n💡 **Tip:** Focus op inzet, niet resultaat. Complimenteer slim.\n😄 **Knipoog:** ‘Dan ben ik de keizer van dom – ik stak ooit een tosti in de dvd-speler’.\n🔗 _Bron: Carol Dweck_"},
+    "Kledingcrisis in de ochtend": {"advies": "📚 **Feit:** Keuzes geven = autonomie ontwikkelen.\n💡 **Tip:** Laat 's avonds kiezen uit 2 outfits.\n😄 **Knipoog:** Of gewoon crocs met glitterjurk. YOLO.\n🔗 _Bron: Positief Opvoeden_"},
+    "Discussie over schermtijd": {"advies": "📚 **Feit:** Te veel schermen = impact op slaap en gedrag.\n💡 **Tip:** Maak samen regels. Stel schermvrije zones.\n😄 **Knipoog:** En ja, jij ook. Oeps.\n🔗 _Bron: Mediaopvoeding.nl_"},
+    "Kind denkt dat hij de baas is": {"advies": "📚 **Feit:** Kinderen testen grenzen, dat is normaal.\n💡 **Tip:** Wees duidelijk en voorspelbaar. Gebruik humor.\n😄 **Knipoog:** Jij bent de manager van team chaos.\n🔗 _Bron: Tischa Neve_"}
 }
 
 # Zoekbalk
 st.subheader("Zoek een gedrag of situatie")
 zoekterm = st.text_input("Typ bijvoorbeeld: boos, school, slapen, dom, luisteren...")
-
-# Filter resultaten
 gevonden = [k for k in adviezen.keys() if zoekterm.lower() in k.lower()] if zoekterm else list(adviezen.keys())
 keuze = st.selectbox("Kies uit de lijst", gevonden)
 
@@ -73,6 +71,13 @@ if st.button("🎁 Geef mij advies"):
 if st.button("🎲 Verras me!"):
     random_key = random.choice(list(adviezen.keys()))
     st.markdown(adviezen[random_key]["advies"])
+
+# Webshop-link
+st.markdown("""
+<div class='webshop-link'>
+    🛍️ Bekijk ook onze <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>leuke producten voor ouders</a>!
+</div>
+""", unsafe_allow_html=True)
 
 # Footer
 st.markdown("<div class='footer'>© 2025 Gezinsfluencers | Advies met een knipoog én inhoud</div>", unsafe_allow_html=True)
