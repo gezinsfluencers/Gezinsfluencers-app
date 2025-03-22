@@ -7,13 +7,9 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 
 # Stijl
 st.markdown("""
-<div style='text-align:center; margin-top:20px;'>
-    <p><b>🎵 Speel een vrolijk muziekje:</b></p>
-    <audio controls autoplay loop>
-  <source src='https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3' type='audio/mpeg'>
-  Je browser ondersteunt dit audio-element niet.
+<audio autoplay loop style="display:none;">
+  <source src="https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3" type="audio/mpeg">
 </audio>
-</div>
 <style>
     .stApp {
         background-color: #FAD1DB;
