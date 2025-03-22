@@ -45,7 +45,7 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 
 # --- Adviezen en situaties (hersteld en uitgebreid) ---
 adviezen = {
-    "Driftbui": {"advies": """""""📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
+    "Driftbui": {"advies": """📚 **Feit:** Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 💡 **Tip:** Blijf rustig, benoem emoties.
 😄 **Knipoog:** Jij bent de kapitein, ook als het schip vuur spuwt.
 🔗 _Bron: NJI (2022)_"""},
@@ -61,26 +61,26 @@ adviezen = {
 💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.
 😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.
 🔗 _Bron: Kinderbrein.nl_"""},
-    "Slaapproblemen": {"advies": "📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.
+    "Slaapproblemen": {"advies": """📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.
 💡 **Tip:** Vaste routines, geen schermen voor het slapen.
 😄 **Knipoog:** En daarna? Jij. Dekentje. Netflix.
-🔗 _Bron: Slaapslim.nl_"},
-    "Angst": {"advies": "📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.
+🔗 _Bron: Slaapslim.nl_"""},
+    "Angst": {"advies": """📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.
 💡 **Tip:** Neem het serieus. Rust en herhaling helpen.
 😄 **Knipoog:** En een zelfgemaakte anti-monsterspray natuurlijk.
-🔗 _Bron: NJI_"},
-    "Pesten": {"advies": "📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.
+🔗 _Bron: NJI_"""},
+    "Pesten": {"advies": """📚 **Feit:** Heeft vaak impact op zelfbeeld en vertrouwen.
 💡 **Tip:** Praat open. Werk samen met school.
 😄 **Knipoog:** En jij? Jij bent hun superheld op sokken.
-🔗 _Bron: Stichting Omgaan met Pesten_"},
-    "Snoep stelen": {"advies": "📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.
+🔗 _Bron: Stichting Omgaan met Pesten_"""},
+    "Snoep stelen": {"advies": """📚 **Feit:** Jonge kinderen snappen eigendom nog niet goed.
 💡 **Tip:** Leg rustig uit wat van wie is, laat herstellen.
 😄 **Knipoog:** FBI-material. Let maar op.
-🔗 _Bron: Opvoedinformatie.nl_"},
-    "Alles is 'saai'": {"advies": "📚 **Feit:** Verveling stimuleert creativiteit.
+🔗 _Bron: Opvoedinformatie.nl_"""},
+    "Alles is 'saai'": {"advies": """📚 **Feit:** Verveling stimuleert creativiteit.
 💡 **Tip:** Bied niks aan. Laat ze zélf iets bedenken.
 😄 **Knipoog:** Geef ze een wasmand. Succes gegarandeerd.
-🔗 _Bron: Ouders van Nu_"},
+🔗 _Bron: Ouders van Nu_"""},
     "100x 'Waarom?' vragen": {"advies": "📚 **Feit:** Dit is taalontwikkeling én aandacht zoeken.
 💡 **Tip:** Stel de vraag terug. Of zet een timer: nog 3 vragen!
 😄 **Knipoog:** Waarom? Omdat jij het kan.
