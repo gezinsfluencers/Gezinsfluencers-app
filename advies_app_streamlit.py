@@ -48,10 +48,13 @@ adviezen = {
     "Driftbui": {"advies": """<b>📚 Feit:</b> Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.
 
 
+
 <b>💡 Tip:</b> Blijf rustig, benoem emoties.
 
 
+
 <b>😄 Knipoog:</b> Jij bent de kapitein, ook als het schip vuur spuwt.
+
 
 
 🔗 _Bron: NJI (2022)_"""""},
@@ -67,9 +70,9 @@ adviezen = {
 💡 <b>💡 Tip:</b> Bied structuur, korte taken en beweging tussendoor.
 😄 <b>😄 Knipoog:</b> Korte pauze = dansen op de woonkamerbank.
 🔗 _Bron: Kinderbrein.nl_"""},
-    "Slaapproblemen": {"advies": """📚 **Feit:** Slaappatronen ontwikkelen zich tot 6 jaar.
-💡 **Tip:** Vaste routines, geen schermen voor het slapen.
-😄 **Knipoog:** En daarna? Jij. Dekentje. Netflix.
+    "Slaapproblemen": {"advies": """📚 <b>📚 Feit:</b> Slaappatronen ontwikkelen zich tot 6 jaar.
+💡 <b>💡 Tip:</b> Vaste routines, geen schermen voor het slapen.
+😄 <b>😄 Knipoog:</b> En daarna? Jij. Dekentje. Netflix.
 🔗 _Bron: Slaapslim.nl_"""},
     "Angst": {"advies": """📚 **Feit:** Angst is normaal, vooral bij nieuwe situaties.
 💡 **Tip:** Neem het serieus. Rust en herhaling helpen.
