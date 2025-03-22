@@ -8,7 +8,7 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 # Stijl
 st.markdown("""
 <audio controls autoplay loop>
-  <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type='audio/mpeg'>
+  <source src='https://cdn.pixabay.com/download/audio/2022/03/15/audio_9b2e6fbf03.mp3?filename=happy-kids-110997.mp3' type='audio/mpeg'>
   Jouw browser ondersteunt dit audio-element niet.
 </audio>
 <style>
