@@ -53,10 +53,10 @@ adviezen = {
 💡 **Tip:** Korte zinnen, oogcontact, positieve feedback.
 😄 **Knipoog:** Fluisteren werkt soms verrassend goed.
 🔗 _Bron: Triple P_"""},
-    "Agressief gedrag": {"advies": "📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.
+    "Agressief gedrag": {"advies": """📚 **Feit:** Kan voortkomen uit onmacht of prikkelgevoeligheid.
 💡 **Tip:** Stel grenzen met rust. Help met woorden geven aan boosheid.
 😄 **Knipoog:** Misschien een kussenbokssessie voor jullie allebei?
-🔗 _Bron: Tischa Neve_"},
+🔗 _Bron: Tischa Neve_"""},
     "Concentratieproblemen": {"advies": "📚 **Feit:** Kinderen zijn vaak overprikkeld of niet uitgedaagd.
 💡 **Tip:** Bied structuur, korte taken en beweging tussendoor.
 😄 **Knipoog:** Korte pauze = dansen op de woonkamerbank.
