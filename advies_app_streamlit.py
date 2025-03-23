@@ -50,11 +50,16 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 
 # Voeg muziek toe die speelt bij een klik op advies
 st.markdown("""
-<audio id="muziek" src="https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3"></audio>
+<audio id="muziek" autoplay hidden>
+  <source src="https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3" type="audio/mpeg">
+</audio>
 <script>
+    var audio = document.getElementById("muziek");
     function speelMuziek() {
-        var audio = window.parent.document.getElementById("muziek");
-        if (audio) { audio.play(); }
+        if (audio) {
+            audio.currentTime = 0;
+            audio.play();
+        }
     }
 </script>
 """, unsafe_allow_html=True)
