@@ -113,5 +113,13 @@ st.subheader("📌 Kies een gedrag of situatie:")
 keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
 
 if st.button("Toon advies"):
-    st.markdown("<script>speelMuziek()</script>", unsafe_allow_html=True)
+    st.components.v1.html("""
+    <script>
+      var audio = window.parent.document.getElementById("muziek");
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(e => console.log("Autoplay blocked:", e));
+      }
+    </script>
+    """, height=0)
     st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
