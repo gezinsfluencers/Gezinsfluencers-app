@@ -235,31 +235,34 @@ if st.button("🎲 Verras me!"):
 # Extra rubriek: Oudertips & Gebeurtenissen
 with st.expander("📋 Oudertips & Situaties"):
     tips = {
-        "🕰️ Wat is de beste bedtijd voor kinderen?": "Tussen 18:30 – 20:30 uur, afhankelijk van leeftijd.
+        "🕰️ Wat is de beste bedtijd voor kinderen?": """Tussen 18:30 – 20:30 uur, afhankelijk van leeftijd.
 Maar wees eerlijk: het echte gevecht begint pas bij tandenpoetsen.
-<b>Pro tip:</b> Ritme is belangrijker dan het exacte tijdstip.",
-        "☀️ Hoe overleef je de zomertijd met kids?": "Hard reset: gewoon gelijk naar het nieuwe ritme.
+<b>Pro tip:</b> Ritme is belangrijker dan het exacte tijdstip.""",
+        "☀️ Hoe overleef je de zomertijd met kids?": """Hard reset: gewoon gelijk naar het nieuwe ritme.
 Of: elke dag 15 minuten verschuiven.
-Kinderen klagen sowieso. Jij wint op doorzettingsvermogen.",
-        "🎒 Wat moet er in een weekendtas voor een kind?": "4 outfits (voor 2 dagen)
+Kinderen klagen sowieso. Jij wint op doorzettingsvermogen.""",
+        "🎒 Wat moet er in een weekendtas voor een kind?": """4 outfits (voor 2 dagen)
 Snacks (voor 3 weken)
 Knuffel, reserveknuffel, en back-up-deken
-En natuurlijk... vergeten tandenborstel. Altijd.",
-        "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken
+En natuurlijk... vergeten tandenborstel. Altijd.""",
+        "🥦 Wat als mijn kind geen groente eet?": """Verstop het in pannenkoeken
 Geef het een toffe naam (‘superheldensaus’)
-Of… accepteer het. Soms is ketchup ook een groente.",
-        "🎮 Hoeveel schermtijd is normaal?": "Zolang jij soms rust krijgt, is het ‘normaal’.
+Of… accepteer het. Soms is ketchup ook een groente.""",
+        "🎮 Hoeveel schermtijd is normaal?": """Zolang jij soms rust krijgt, is het ‘normaal’.
 Officieel: max. 1 uur per dag (peuters).
-Realistisch: dat was alleen haalbaar toen de wifi uitviel.",
-        "🍽️ Wat eten we vanavond? (met weinig tijd)": "Pasta + pesto + iets van groenten
+Realistisch: dat was alleen haalbaar toen de wifi uitviel.""",
+        "🍽️ Wat eten we vanavond? (met weinig tijd)": """Pasta + pesto + iets van groenten
 Soep + tosti = feestmaal
 Of ontbijt als avondeten = altijd goed bij kinderen
-<b>Tip:</b> Als je er een naam aan geeft (‘avonturenpasta’), eten ze het eerder.",
-        "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": "Label álles (inclusief hun sokken, want echt)
+<b>Tip:</b> Als je er een naam aan geeft (‘avonturenpasta’), eten ze het eerder.""",
+        "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": """Label álles (inclusief hun sokken, want echt)
 Reservekleding
 Duidelijke afspraken over ophalen
-En mentale voorbereiding op ALLE themaweken",
-        "🎉 Wat is een goede kindertraktatie zonder gedoe?": "Rozijntjes met een wiebel-oogje
+En mentale voorbereiding op ALLE themaweken""",
+        "🎉 Wat is een goede kindertraktatie zonder gedoe?": """Rozijntjes met een wiebel-oogje
+Rijstwafel met smiley
+Mini marshmallows in een zakje = feestje
+→ Ouders blij = missie geslaagd.""""Rozijntjes met een wiebel-oogje
 Rijstwafel met smiley
 Mini marshmallows in een zakje = feestje
 → Ouders blij = missie geslaagd."
