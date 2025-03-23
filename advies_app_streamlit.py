@@ -80,7 +80,15 @@ adviezen = {
     "Pesten": {"advies": "🧠 <b>Feit:</b> Gepest worden heeft veel impact, maar ook pesters missen vaak sociale vaardigheden.<br><br>💡 <b>Tip:</b> Praat dagelijks over school, neem signalen serieus.<br><br>😉 <b>Knipoog:</b> Een veilig thuis maakt het verschil.<br><br>📚 <b>Bron:</b> Stichting Stop Pesten Nu"},
     "Overprikkeld na school": {"advies": "🧠 <b>Feit:</b> Schooldagen zijn intens. Kinderen moeten ontladen.<br><br>💡 <b>Tip:</b> Geef rust na schooltijd, laat ze ontladen voordat je verwachtingen stelt.<br><br>😉 <b>Knipoog:</b> Thuis komen = opladen, niet presteren.<br><br>📚 <b>Bron:</b> Hersenstichting / Ouders Centraal"},
     "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Verwacht geen Zwitsers horloge van een kleuter.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
-    "Spulletjes stelen": {"advies": "🧠 <b>Feit:</b> Jonge kinderen snappen eigendom nog niet altijd.<br><br>💡 <b>Tip:</b> Leg rustig uit wat van jou en ander is en herstel samen.<br><br>😉 <b>Knipoog:</b> Misschien wilde hij gewoon delen… op zijn manier.<br><br>📚 <b>Bron:</b> Ouders van Nu / Kenniscentrum Kinderrechten"}
+    "Spulletjes stelen": {"advies": "🧠 <b>Feit:</b> Jonge kinderen snappen eigendom nog niet altijd.<br><br>💡 <b>Tip:</b> Leg rustig uit wat van jou en ander is en herstel samen.<br><br>😉 <b>Knipoog:</b> Misschien wilde hij gewoon delen… op zijn manier.<br><br>📚 <b>Bron:</b> Ouders van Nu / Kenniscentrum Kinderrechten"},
+
+    "Schelden": {"advies": "🧠 <b>Feit:</b> Schelden is vaak een uitlaatklep voor frustratie die ze nog niet kunnen reguleren.<br><br>💡 <b>Tip:</b> Herhaal dat woorden pijn kunnen doen, en bied alternatieven zoals 'pauzewoorden'.<br><br>😉 <b>Knipoog:</b> Kleine mond, grote meningen. Gelukkig geen microfoon erbij.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
+
+    "Niet delen": {"advies": "🧠 <b>Feit:</b> Delen is pas echt goed te verwachten vanaf ongeveer 4 jaar.<br><br>💡 <b>Tip:</b> Speel samen en benoem positief gedrag als het wél gebeurt.<br><br>😉 <b>Knipoog:</b> ‘Samen spelen, samen delen’... maar die regel gold niet voor zijn favoriete dino.<br><br>📚 <b>Bron:</b> NJi / Pedagogisch Kader Kinderopvang"},
+
+    "Eten weigeren": {"advies": "🧠 <b>Feit:</b> Smaakpapillen van kinderen zijn gevoeliger dan die van volwassenen.<br><br>💡 <b>Tip:</b> Laat kinderen meehelpen met koken en bied iets vaker aan zonder dwang.<br><br>😉 <b>Knipoog:</b> Als het geen pannenkoek of pasta is, noemen ze het 'vies'.<br><br>📚 <b>Bron:</b> Voedingscentrum"},
+
+    "Heel druk gedrag": {"advies": "🧠 <b>Feit:</b> Veel bewegen hoort bij de ontwikkeling, maar kan soms duiden op behoefte aan prikkelverwerking.<br><br>💡 <b>Tip:</b> Bied beweegmomenten aan én rustmomenten, structuur helpt.<br><br>😉 <b>Knipoog:</b> Springen op de bank = kinderversie van espresso.<br><br>📚 <b>Bron:</b> Balans Digitaal / Hersenstichting"}
 }
 
 # --- Oudertips & Gebeurtenissen ---
