@@ -9,7 +9,7 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 st.markdown("""
 <style>
     .stApp {
-        background-color: #FAD1DB;
+        background-color: #f9f5f0;
         font-family: 'Comic Sans MS', cursive;
     }
     .title {
