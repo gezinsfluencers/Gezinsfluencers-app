@@ -87,7 +87,6 @@ with st.expander("📋 Oudertips & Situaties"):
     if st.button("📌 Toon oudertip"):
         st.markdown(f"<div class='advies-box'><b>{gekozen_tip}</b><br><br>{tips[gekozen_tip]}</div>", unsafe_allow_html=True)
 adviezen.update({
-    ...,
     "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Kinderen leven op hun eigen tijdzone.<br><br>📚 <b>Bron:</b> Pedagogisch Tijdschrift / NJi"},
     "Sloffen in plaats van schoenen": {"advies": "🧠 <b>Feit:</b> Comfort wint vaak van etiquette bij kinderen.<br><br>💡 <b>Tip:</b> Laat ze zelf schoenen kiezen (met grip) bij de voordeur.<br><br>😉 <b>Knipoog:</b> Sloffen zijn ook maar rebels schoeisel.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
     "Vingervlug op alles drukken": {"advies": "🧠 <b>Feit:</b> Jonge kinderen leren door aanraking.<br><br>💡 <b>Tip:</b> Bied dingen aan waarop gedrukt mág worden.<br><br>😉 <b>Knipoog:</b> Elk knopje roept ‘druk op mij!’ – logisch toch?<br><br>📚 <b>Bron:</b> Breinontwikkeling bij jonge kinderen – Hersenstichting"},
