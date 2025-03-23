@@ -69,7 +69,8 @@ adviezen = {
     "Angst": {"advies": "🧸 <b>Feit:</b> Angst is normaal in fases (donker, monsters, school).<br><br>💡 <b>Tip:</b> Erken de angst, help woorden geven, speel het na.<br><br>😉 <b>Knipoog:</b> Je kind is dapperder dan je denkt – zeker met jou ernaast.<br><br>📚 <b>Bron:</b> Kindertelefoon / KJP Nederland"},
     "Pesten": {"advies": "🧠 <b>Feit:</b> Gepest worden heeft veel impact, maar ook pesters missen vaak sociale vaardigheden.<br><br>💡 <b>Tip:</b> Praat dagelijks over school, neem signalen serieus.<br><br>😉 <b>Knipoog:</b> Een veilig thuis maakt het verschil.<br><br>📚 <b>Bron:</b> Stichting Stop Pesten Nu"},
     "Overprikkeld na school": {"advies": "🧠 <b>Feit:</b> Schooldagen zijn intens. Kinderen moeten ontladen.<br><br>💡 <b>Tip:</b> Geef rust na schooltijd, laat ze ontladen voordat je verwachtingen stelt.<br><br>😉 <b>Knipoog:</b> Thuis komen = opladen, niet presteren.<br><br>📚 <b>Bron:</b> Hersenstichting / Ouders Centraal"},
-    "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Verwacht geen Zwitsers horloge van een kleuter.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"}
+    "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Verwacht geen Zwitsers horloge van een kleuter.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
+    "Spulletjes stelen": {"advies": "🧠 <b>Feit:</b> Jonge kinderen snappen eigendom nog niet altijd.<br><br>💡 <b>Tip:</b> Leg rustig uit wat van jou en ander is en herstel samen.<br><br>😉 <b>Knipoog:</b> Misschien wilde hij gewoon delen… op zijn manier.<br><br>📚 <b>Bron:</b> Ouders van Nu / Kenniscentrum Kinderrechten"}
 }
 
 # --- Oudertips & Gebeurtenissen ---
@@ -104,4 +105,3 @@ keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
 if st.button("Toon advies"):
     st.markdown("<script>speelMuziek()</script>", unsafe_allow_html=True)
     st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
-
