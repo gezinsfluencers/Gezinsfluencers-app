@@ -50,17 +50,22 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 
 # Voeg muziek toe die speelt bij een klik op advies
 st.markdown("""
-<audio id="muziek" autoplay hidden>
+<audio id="muziek" preload="auto">
   <source src="https://raw.githubusercontent.com/gezinsfluencers/Gezinsfluencers-app/main/happy-music-upbeat-fun-uplifting-travel-background-intro-theme-297310.mp3" type="audio/mpeg">
 </audio>
 <script>
-    var audio = document.getElementById("muziek");
-    function speelMuziek() {
-        if (audio) {
-            audio.currentTime = 0;
-            audio.play();
-        }
+  const audio = document.getElementById("muziek");
+  function speelMuziek() {
+    if (audio && typeof audio.play === 'function') {
+      audio.currentTime = 0;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Audio play blocked by browser:", error);
+        });
+      }
     }
+  }
 </script>
 """, unsafe_allow_html=True)
 
