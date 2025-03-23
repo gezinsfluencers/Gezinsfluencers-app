@@ -259,7 +259,7 @@ Of ontbijt als avondeten = altijd goed bij kinderen
 Reservekleding
 Duidelijke afspraken over ophalen
 En mentale voorbereiding op ALLE themaweken""",
-        "🎉 Wat is een goede kindertraktatie zonder gedoe?": """Rozijntjes met een wiebel-oogje
+        "🎉 Wat is een goede kindertraktatie zonder gedoe?": """"""Rozijntjes met een wiebel-oogje
 Rijstwafel met smiley
 Mini marshmallows in een zakje = feestje
 → Ouders blij = missie geslaagd.""""Rozijntjes met een wiebel-oogje
