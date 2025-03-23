@@ -97,6 +97,15 @@ with st.expander("📋 Oudertips & Situaties"):
     }
     gekozen_tip = st.selectbox("Kies een oudertip of situatie", list(tips.keys()))
     if st.button("📌 Toon oudertip"):
+        st.components.v1.html("""
+        <script>
+          var audio = window.parent.document.getElementById("muziek");
+          if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Autoplay blocked:", e));
+          }
+        </script>
+        """, height=0)
         st.markdown(f"<div class='advies-box'><b>{gekozen_tip}</b><br><br>{tips[gekozen_tip]}</div>", unsafe_allow_html=True)
 
 # Extra webshop link
