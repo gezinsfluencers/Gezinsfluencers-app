@@ -50,6 +50,9 @@ st.markdown("<p style='text-align:center;'>Kies hieronder een situatie om advies
 
 # --- Adviezen en situaties worden hier toegevoegd ---
 
+# Variabele aanmaken om fout te voorkomen
+adviezen = {}
+
 # Automatisch afspelen van muziek na klik
 st.markdown("""
 <audio autoplay loop style='display:none;'>
