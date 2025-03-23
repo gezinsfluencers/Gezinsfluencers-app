@@ -59,29 +59,17 @@ st.markdown("""
 </script>
 """, unsafe_allow_html=True)
 
-# --- Adviezen en situaties worden hier toegevoegd ---
-
-# Variabele aanmaken om fout te voorkomen
+# Adviezen herstellen met inhoud
 adviezen = {
-    "Driftbui": {"advies": "🧠 <b>Feit:</b> Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.<br><br>💡 <b>Tip:</b> Blijf zelf rustig. Geef het kind ruimte om tot rust te komen. Praat na afloop over de emotie.<br><br>😉 <b>Knipoog:</b> Je kind verandert soms in een mini-hulk.<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)"},
-    "Niet luisteren": {"advies": "🧠 <b>Feit:</b> ‘Niet luisteren’ = vaak overprikkeling of testgedrag.<br><br>💡 <b>Tip:</b> Gebruik korte, heldere zinnen. Zorg voor oogcontact.<br><br>😉 <b>Knipoog:</b> Misschien hoorde hij je wel, maar negeerde je professioneel.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
-    "Agressief gedrag": {"advies": "🧠 <b>Feit:</b> Komt vaak voort uit onmacht of prikkelgevoeligheid.<br><br>💡 <b>Tip:</b> Benoem gevoelens en bied alternatieven zoals knijpklei of een rustige plek.<br><br>😉 <b>Knipoog:</b> Je kind als ninja? Alleen zonder zwarte band.<br><br>📚 <b>Bron:</b> Augeo / NJi"},
-    "Concentratieproblemen": {"advies": "🧠 <b>Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.<br><br>💡 <b>Tip:</b> Werk met korte blokjes, pauzes en duidelijke doelen.<br><br>😉 <b>Knipoog:</b> Als een goudvis met cafeïne...<br><br>📚 <b>Bron:</b> Gedragswetenschap Magazine"},
-    "Slaapproblemen": {"advies": "🧠 <b>Feit:</b> Slaappatronen ontwikkelen zich tot 6 jaar.<br><br>💡 <b>Tip:</b> Werk met een vast bedritueel en schermvrije tijd.<br><br>😉 <b>Knipoog:</b> Ze worden wakker vóór je wekker én blijven wakker ná bedtijd.<br><br>📚 <b>Bron:</b> Slaapinstituut Nederland"},
-    "Angst": {"advies": "🧠 <b>Feit:</b> Angsten zijn normaal bij kinderen en vaak leeftijdsgebonden.<br><br>💡 <b>Tip:</b> Neem het serieus, maar vergroot het niet. Geef geruststelling.<br><br>😉 <b>Knipoog:</b> Spoken onder het bed – maar wel met glitterjurk.<br><br>📚 <b>Bron:</b> Pedagogisch Tijdschrift"},
-    "Pesten": {"advies": "🧠 <b>Feit:</b> Pesten heeft invloed op zelfbeeld en veiligheid.<br><br>💡 <b>Tip:</b> Bespreek het met kind én school. Benoem wat respectvol is.<br><br>😉 <b>Knipoog:</b> Iedereen wil cool zijn, maar niet iedereen weet hoe.<br><br>📚 <b>Bron:</b> Stichting School en Veiligheid"},
-    "Snoep stelen": {"advies": "🧠 <b>Feit:</b> Jonge kinderen begrijpen eigendom nog niet goed.<br><br>💡 <b>Tip:</b> Leg rustig uit wat stelen is, zonder zware straf. Herhaal wat wél mag.<br><br>😉 <b>Knipoog:</b> Kleine handjes, grote plannen.<br><br>📚 <b>Bron:</b> Ouderschap Blijft"},
-    "Overprikkeld na school": {"advies": "🧠 <b>Feit:</b> Schooldagen zijn intens. Kinderen moeten ontladen.<br><br>💡 <b>Tip:</b> Geef rust na schooltijd, laat ze ontladen met vrij spel.<br><br>😉 <b>Knipoog:</b> Gek doen = even ontladen. Jij noemt het chaos.<br><br>📚 <b>Bron:</b> Prikkels.nl / Balans Digitaal"}
-  "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Kinderen leven op hun eigen tijdzone.<br><br>📚 <b>Bron:</b> Pedagogisch Tijdschrift / NJi"},
-    "Sloffen in plaats van schoenen": {"advies": "🧠 <b>Feit:</b> Comfort wint vaak van etiquette bij kinderen.<br><br>💡 <b>Tip:</b> Laat ze zelf schoenen kiezen (met grip) bij de voordeur.<br><br>😉 <b>Knipoog:</b> Sloffen zijn ook maar rebels schoeisel.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"},
-    "Vingervlug op alles drukken": {"advies": "🧠 <b>Feit:</b> Jonge kinderen leren door aanraking.<br><br>💡 <b>Tip:</b> Bied dingen aan waarop gedrukt mág worden.<br><br>😉 <b>Knipoog:</b> Elk knopje roept ‘druk op mij!’ – logisch toch?<br><br>📚 <b>Bron:</b> Breinontwikkeling bij jonge kinderen – Hersenstichting"},
-    "Schelden of nare woorden gebruiken": {"advies": "🧠 <b>Feit:</b> Kinderen kopiëren taalgebruik uit hun omgeving.<br><br>💡 <b>Tip:</b> Benoem alternatief taalgebruik, herhaal vriendelijk.<br><br>😉 <b>Knipoog:</b> Papegaai gespeeld, zonder kooi.<br><br>📚 <b>Bron:</b> Taalontwikkeling.nl / Ouders Centraal"},
-    "Alles is oneerlijk": {"advies": "🧠 <b>Feit:</b> Rechtvaardigheidsgevoel piekt tussen 4-8 jaar.<br><br>💡 <b>Tip:</b> Benoem gevoelens, en leg uit waarom iets zo gaat.<br><br>😉 <b>Knipoog:</b> ‘Eerlijk’ = als zij winnen.<br><br>📚 <b>Bron:</b> GroeiGids / Positief Opvoeden"},
-    "Alles vergeten op school": {"advies": "🧠 <b>Feit:</b> Geheugen & executieve functies zijn volop in ontwikkeling.<br><br>💡 <b>Tip:</b> Checklijst maken of tas samen inpakken helpt!<br><br>😉 <b>Knipoog:</b> Gymtas? Broodtrommel? Alleen hun glimlach is mee.<br><br>📚 <b>Bron:</b> Onderwijsontwikkeling Nederland"},
-    "Niet willen douchen": {"advies": "🧠 <b>Feit:</b> Sensorisch ongemak of geen tijdsbesef.<br><br>💡 <b>Tip:</b> Maak er een vast moment van, liefst speels (watergevecht, liedje).<br><br>😉 <b>Knipoog:</b> In bad gaan? Alleen als piraat op missie.<br><br>📚 <b>Bron:</b> Ouderschap Blijft / Sensorische prikkelverwerking"},
-    "Smoesjes bij huiswerk": {"advies": "🧠 <b>Feit:</b> Concentratie wisselt en motivatie mist vaak bij verplichte taken.<br><br>💡 <b>Tip:</b> Maak kleine taakjes, plan pauzes en geef complimenten.<br><br>😉 <b>Knipoog:</b> Het huiswerk is ineens 'per ongeluk' verdwenen.<br><br>📚 <b>Bron:</b> Ouders Online / Leerlingbegeleiding"},
-    "Wiebelen aan tafel": {"advies": "🧠 <b>Feit:</b> Niet iedereen kan lang stilzitten (zeker na school).<br><br>💡 <b>Tip:</b> Laat even bewegen voor etenstijd, en hou het kort.<br><br>😉 <b>Knipoog:</b> Stoel = trampoline in hun hoofd.<br><br>📚 <b>Bron:</b> Gedragsspecialisten / Ouders Centraal"},
-    "Elke dag verkleed willen zijn": {"advies": "🧠 <b>Feit:</b> Fantasie versterkt zelfexpressie en creatief denken.<br><br>💡 <b>Tip:</b> Geef ruimte, leg grenzen uit bij specifieke gelegenheden.<br><br>😉 <b>Knipoog:</b> Superheld naar school? Waarom niet.<br><br>📚 <b>Bron:</b> Kinderpsychologie Magazine / Speelgoed Nederland"}
+    "Driftbui": {"advies": "🧠 <b>Feit:</b> Kinderen tussen 2 en 6 hebben moeite met zelfregulatie.<br><br>💡 <b>Tip:</b> Geef rust, erken het gevoel, en stel grenzen.<br><br>😉 <b>Knipoog:</b> Jij blijft de kapitein, ook als het schip stormt.<br><br>📚 <b>Bron:</b> Tischa Neve, kinderpsycholoog"},
+    "Niet luisteren": {"advies": "📖 <b>Feit:</b> ‘Niet luisteren’ is vaak overprikkeling of testgedrag.<br><br>💡 <b>Tip:</b> Geef korte opdrachten en laat kind herhalen.<br><br>😉 <b>Knipoog:</b> Hoor jij je baas altijd direct bij het eerste verzoek?<br><br>📚 <b>Bron:</b> How2talk2kids"},
+    "Agressief gedrag": {"advies": "🧠 <b>Feit:</b> Kan voortkomen uit onmacht of prikkelgevoeligheid.<br><br>💡 <b>Tip:</b> Benoem wat wél mag, blijf zelf rustig.<br><br>😉 <b>Knipoog:</b> Jouw rust is besmettelijker dan je denkt.<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)"},
+    "Concentratieproblemen": {"advies": "📚 <b>Feit:</b> Kinderen zijn vaak overprikkeld of niet uitgedaagd.<br><br>💡 <b>Tip:</b> Bied structuur, korte taken en beweging tussendoor.<br><br>😉 <b>Knipoog:</b> Niemand focust 6 uur achter elkaar. Zelfs wij niet.<br><br>📚 <b>Bron:</b> Klassenkracht / ADHD-centrum"},
+    "Slaapproblemen": {"advies": "🌙 <b>Feit:</b> Slaappatronen ontwikkelen zich tot 6 jaar.<br><br>💡 <b>Tip:</b> Creëer vaste rituelen, schermvrij uur voor bedtijd.<br><br>😉 <b>Knipoog:</b> Zelfs nachtdieren leren slapen met ritme.<br><br>📚 <b>Bron:</b> Centrum voor Slaapgeneeskunde SEIN"},
+    "Angst": {"advies": "🧸 <b>Feit:</b> Angst is normaal in fases (donker, monsters, school).<br><br>💡 <b>Tip:</b> Erken de angst, help woorden geven, speel het na.<br><br>😉 <b>Knipoog:</b> Je kind is dapperder dan je denkt – zeker met jou ernaast.<br><br>📚 <b>Bron:</b> Kindertelefoon / KJP Nederland"},
+    "Pesten": {"advies": "🧠 <b>Feit:</b> Gepest worden heeft veel impact, maar ook pesters missen vaak sociale vaardigheden.<br><br>💡 <b>Tip:</b> Praat dagelijks over school, neem signalen serieus.<br><br>😉 <b>Knipoog:</b> Een veilig thuis maakt het verschil.<br><br>📚 <b>Bron:</b> Stichting Stop Pesten Nu"},
+    "Overprikkeld na school": {"advies": "🧠 <b>Feit:</b> Schooldagen zijn intens. Kinderen moeten ontladen.<br><br>💡 <b>Tip:</b> Geef rust na schooltijd, laat ze ontladen voordat je verwachtingen stelt.<br><br>😉 <b>Knipoog:</b> Thuis komen = opladen, niet presteren.<br><br>📚 <b>Bron:</b> Hersenstichting / Ouders Centraal"},
+    "Te laat komen": {"advies": "🧠 <b>Feit:</b> Tijdsbesef ontwikkelt zich pas rond 7 jaar.<br><br>💡 <b>Tip:</b> Gebruik visuele timers of pictogrammen in de ochtendroutine.<br><br>😉 <b>Knipoog:</b> Verwacht geen Zwitsers horloge van een kleuter.<br><br>📚 <b>Bron:</b> Opvoedinformatie Nederland"}
 }
 
 # --- Oudertips & Gebeurtenissen ---
@@ -100,6 +88,13 @@ with st.expander("📋 Oudertips & Situaties"):
     if st.button("📌 Toon oudertip"):
         st.markdown(f"<div class='advies-box'><b>{gekozen_tip}</b><br><br>{tips[gekozen_tip]}</div>", unsafe_allow_html=True)
 
+# Extra webshop link
+st.markdown("""
+<div class='webshop-link'>
+    🛍️ <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>Bekijk ook onze webshop voor leuke producten</a>
+</div>
+""", unsafe_allow_html=True)
+
 # --- Gedrag selecteren en advies tonen ---
 st.markdown("<hr>", unsafe_allow_html=True)
 st.subheader("📌 Kies een gedrag of situatie:")
@@ -110,9 +105,3 @@ if st.button("Toon advies"):
     st.markdown("<script>speelMuziek()</script>", unsafe_allow_html=True)
     st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
 
-# Extra webshop link
-st.markdown("""
-<div class='webshop-link'>
-    🛍️ <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>Bekijk ook onze webshop voor leuke producten</a>
-</div>
-""", unsafe_allow_html=True)
