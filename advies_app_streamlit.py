@@ -10,7 +10,7 @@ st.markdown("""
 <style>
     .stApp {
         background-color: #eae4db;
-        font-family: 'Comic Sans MS', cursive;
+font-family: 'Poppins', sans-serif;
     }
     .title {
         text-align: center;
