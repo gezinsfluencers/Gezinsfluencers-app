@@ -171,7 +171,7 @@ if weer_data:
     st.markdown(f"<div class='advies-box'>📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>👚 <b>Kledingtip:</b> {advies}</div>", unsafe_allow_html=True)
 else:
     st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.") 
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.write("")  # lege regel
 
 
 keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
