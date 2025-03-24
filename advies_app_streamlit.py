@@ -122,6 +122,56 @@ st.markdown("""
     🛍️ <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>Bekijk ook onze webshop voor leuke producten</a>
 </div>
 """, unsafe_allow_html=True)
+# --- Weeradvies & kledingtip ---
+import requests
+
+def haal_weer_data(api_key, stad="Amsterdam"):
+    try:
+        url = f"https://api.openweathermap.org/data/2.5/weather?q={stad}&appid={api_key}&units=metric&lang=nl"
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return None
+    except:
+        return None
+
+def genereer_kledingadvies(temp):
+    if temp >= 25:
+        return "☀️ Korte broek en t-shirt – zonnebrand niet vergeten!"
+    elif temp >= 18:
+        return "🌤️ Luchtige kleding met eventueel een vest."
+    elif temp >= 12:
+        return "🍃 Lange broek en trui. Jas mee voor de zekerheid."
+    elif temp >= 5:
+        return "🌥️ Warme jas, sjaal en dichte schoenen."
+    else:
+        return "❄️ Dikke jas, muts en handschoenen – brrr!"
+
+# API key van OpenWeather
+api_key = "3c9f7bdff73f7d336480c44e3bbae6b7"
+weer_data = haal_weer_data(api_key)
+
+if weer_data:
+    temperatuur = weer_data["main"]["temp"]
+    omschrijving = weer_data["weather"][0]["description"]
+    advies = genereer_kledingadvies(temperatuur)
+
+    st.markdown("<hr>", unsafe_allow_html=True)
+    st.subheader("👕 Kledingadvies voor vandaag")
+    st.components.v1.html("""
+        <script>
+          var audio = window.parent.document.getElementById("muziek");
+          if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Autoplay blocked:", e));
+          }
+        </script>
+    """, height=0)
+    st.markdown(f"<div class='advies-box'>📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>👚 <b>Kledingtip:</b> {advies}</div>", unsafe_allow_html=True)
+else:
+    st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
+
 import requests
 
 st.markdown("## 👕 Kledingadvies voor vandaag")
