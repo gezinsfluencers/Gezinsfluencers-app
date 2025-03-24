@@ -124,7 +124,7 @@ with st.expander("📋 Oudertips & Situaties"):
 ✅ Boekje of klein speelgoed<br>\
 ✅ Eventuele medicijnen met instructie<br><br>\
 📚 <b>Bron:</b> Ouders van Nu"
-        "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken<br>Geef het een toffe naam (‘superheldensaus’)<br>Of… accepteer het. Soms is ketchup ook een groente.<br><br>📚 <b>Bron:</b> Voedingscentrum",
+        "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken<br>Geef het een toffe naam ('superheldensaus')<br>Of… accepteer het. Soms is ketchup ook een groente.<br><br>📚 <b>Bron:</b> Voedingscentrum",
         "🎮 Hoeveel schermtijd is normaal?": "Voor jonge kinderen (2-5 jaar) wordt maximaal 1 uur schermtijd per dag aangeraden, bij voorkeur samen met een ouder; voor kinderen van 6-12 jaar is 1 tot 2 uur per dag passend, met duidelijke afspraken over inhoud, pauzes en balans met offline activiteiten — het belangrijkste blijft: schermtijd bewust inzetten, niet als standaard vervanger voor verveling of contact..<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)<br><br>😉 <b>Knipoog:</b> Max. 1 uur per dag? Alleen haalbaar toen de wifi uitviel.",
         "🍽️ Wat eten we vanavond? (met weinig tijd)": "Pasta + pesto + iets van groenten<br>Soep + tosti = feestmaal<br>Of ontbijt als avondeten = altijd goed bij kinderen<br><br>💡 <b>Tip:</b> Geef het een naam (‘avonturenpasta’) en ze eten het eerder.<br><br>📚 <b>Bron:</b> Gezinsbond",
         "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": "Label álles (inclusief hun sokken)<br>Reservekleding<br>Duidelijke afspraken over ophalen<br>Mentale voorbereiding op ALLE themaweken<br><br>📚 <b>Bron:</b> Ouders Centraal / NJi",
