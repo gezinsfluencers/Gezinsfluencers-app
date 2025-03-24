@@ -118,7 +118,8 @@ with st.expander("📋 Oudertips & Situaties"):
         "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": "Label álles (inclusief hun sokken)<br>Reservekleding<br>Duidelijke afspraken over ophalen<br>Mentale voorbereiding op ALLE themaweken<br><br>📚 <b>Bron:</b> Ouders Centraal / NJi",
         "🎉 Wat is een goede kindertraktatie zonder gedoe?": "Rozijntjes met een wiebel-oogje<br>Rijstwafel met smiley<br>Mini marshmallows in een zakje = feestje<br><br>😉 <b>Knipoog:</b> Ouders blij = missie geslaagd.<br><br>📚 <b>Bron:</b> Gezonde School / Voedingscentrum"
     }
-    gekozen_tip = st.selectbox("Kies een oudertip of situatie", list(tips.keys()))
+    st.markdown("<p style='font-size:20px; font-weight:bold;'>📋 Oudertips & Situaties</p>", unsafe_allow_html=True)
+gekozen_tip = st.selectbox("", list(tips.keys()))
     if st.button("📌 Toon oudertip"):
         st.components.v1.html("""
         <script>
