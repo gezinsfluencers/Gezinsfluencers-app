@@ -90,6 +90,44 @@ adviezen = {
 
     "Heel druk gedrag": {"advies": "🧠 <b>Feit:</b> Veel bewegen hoort bij de ontwikkeling, maar kan soms duiden op behoefte aan prikkelverwerking.<br><br>💡 <b>Tip:</b> Bied beweegmomenten aan én rustmomenten, structuur helpt.<br><br>😉 <b>Knipoog:</b> Springen op de bank = kinderversie van espresso.<br><br>📚 <b>Bron:</b> Balans Digitaal / Hersenstichting"}
 }
+import requests
+
+# OpenWeather API instellen
+API_KEY = "3c9f7bdff73f7d336480c44e3bbae6b7"
+city = "Uithoorn"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=nl"
+
+def geef_kledingadvies(temp, weer):
+    if temp >= 24:
+        return "☀️ Warm weer! Korte broek en T-shirt zijn perfect. Vergeet de zonnebrand niet!"
+    elif temp >= 18:
+        return "🌤️ Lenteachtig weer. Shirt met lange mouwen of een luchtige trui is genoeg."
+    elif temp >= 12:
+        return "🌥️ Frisser, trek een trui of jas aan. Lange broek aanbevolen."
+    elif temp >= 5:
+        return "🌬️ Koud. Jas, sjaal, en eventueel een muts!"
+    else:
+        return "❄️ Erg koud! Winterjas, muts, handschoenen en sjaal zijn geen overbodige luxe."
+
+try:
+    response = requests.get(url)
+    data = response.json()
+    temperatuur = data["main"]["temp"]
+    weer_omschrijving = data["weather"][0]["description"]
+
+    kledingadvies = geef_kledingadvies(temperatuur, weer_omschrijving)
+
+    st.markdown("---")
+    st.subheader("👕 Kledingadvies op basis van het weer vandaag:")
+    st.markdown(f"""
+    📍 Locatie: **{city}**  
+    🌡️ Temperatuur: **{temperatuur}°C**  
+    🌦️ Weer: **{weer_omschrijving.capitalize()}**  
+    👚 Advies: **{kledingadvies}**
+    """)
+
+except Exception as e:
+    st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
 
 # --- Oudertips & Gebeurtenissen ---
 with st.expander("📋 Oudertips & Situaties"):
