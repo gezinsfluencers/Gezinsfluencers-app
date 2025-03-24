@@ -38,14 +38,19 @@ st.markdown("""
         margin-top: 20px;
     }
 label {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 button[kind="primary"] {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
+    padding: 12px 24px;
 }
+
+div[data-baseweb="select"] {
+    font-size: 20px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
