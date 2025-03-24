@@ -8,17 +8,6 @@ st.set_page_config(page_title="Gezinsfluencers Advies App", layout="centered")
 # Stijl
 st.markdown("""
 <style>
-/* Stijl voor de dropdowns */
-div[data-baseweb="select"] {
-    font-size: 18px;
-}
-
-/* Stijl voor labels zoals 'Gedrag of situatie' */
-label {
-    font-size: 18px;
-    font-weight: bold;
-}
-
     .stApp {
         background-color: #eae4db;
         font-family: 'Comic Sans MS', cursive;
@@ -48,6 +37,15 @@ label {
         font-size: 18px;
         margin-top: 20px;
     }
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button[kind="primary"] {
+    font-size: 18px;
+    padding: 10px 20px;
+}
 </style>
 """, unsafe_allow_html=True)
 
