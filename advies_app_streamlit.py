@@ -124,42 +124,35 @@ st.markdown("""
 """, unsafe_allow_html=True)
 import requests
 
-# OpenWeather API instellen
-API_KEY = "3c9f7bdff73f7d336480c44e3bbae6b7"
-city = "Uithoorn"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=nl"
+st.markdown("## 👕 Kledingadvies voor vandaag")
 
-def geef_kledingadvies(temp, weer):
-    if temp >= 24:
-        return "☀️ Warm weer! Korte broek en T-shirt zijn perfect. Vergeet de zonnebrand niet!"
-    elif temp >= 18:
-        return "🌤️ Lenteachtig weer. Shirt met lange mouwen of een luchtige trui is genoeg."
-    elif temp >= 12:
-        return "🌥️ Frisser, trek een trui of jas aan. Lange broek aanbevolen."
-    elif temp >= 5:
-        return "🌬️ Koud. Jas, sjaal, en eventueel een muts!"
-    else:
-        return "❄️ Erg koud! Winterjas, muts, handschoenen en sjaal zijn geen overbodige luxe."
+api_key = "3c9f7bdff73f7d336480c44e3bbae6b7"
+city = "Amsterdam"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=nl"
 
 try:
     response = requests.get(url)
     data = response.json()
-    temperatuur = data["main"]["temp"]
-    weer_omschrijving = data["weather"][0]["description"]
 
-    kledingadvies = geef_kledingadvies(temperatuur, weer_omschrijving)
+    if response.status_code == 200 and "main" in data:
+        temp = data["main"]["temp"]
+        kledingadvies = ""
 
-    st.markdown("---")
-    st.subheader("👕 Kledingadvies op basis van het weer vandaag:")
-    st.markdown(f"""
-    📍 Locatie: **{city}**  
-    🌡️ Temperatuur: **{temperatuur}°C**  
-    🌦️ Weer: **{weer_omschrijving.capitalize()}**  
-    👚 Advies: **{kledingadvies}**
-    """)
+        if temp > 24:
+            kledingadvies = "👕 Korte broek en T-shirt. Smeer je kind goed in!"
+        elif temp > 18:
+            kledingadvies = "👖 Luchtige kleding en eventueel een vestje."
+        elif temp > 12:
+            kledingadvies = "🧥 Lange broek en trui of jas."
+        else:
+            kledingadvies = "🧣 Warme jas, sjaal en misschien een muts!"
+
+        st.success(f"In {city} is het nu {temp}°C. {kledingadvies}")
+    else:
+        st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
 
 except Exception as e:
-    st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
+    st.error(f"Fout bij ophalen van het weer: {e}")
 
 # --- Gedrag selecteren en advies tonen ---
 st.markdown("<hr>", unsafe_allow_html=True)
