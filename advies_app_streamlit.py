@@ -172,42 +172,6 @@ if weer_data:
 else:
     st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
 
-import requests
-
-st.markdown("## 👕 Kledingadvies voor vandaag")
-
-api_key = "3c9f7bdff73f7d336480c44e3bbae6b7"
-city = "Amsterdam"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=nl"
-
-try:
-    response = requests.get(url)
-    data = response.json()
-
-    if response.status_code == 200 and "main" in data:
-        temp = data["main"]["temp"]
-        kledingadvies = ""
-
-        if temp > 24:
-            kledingadvies = "👕 Korte broek en T-shirt. Smeer je kind goed in!"
-        elif temp > 18:
-            kledingadvies = "👖 Luchtige kleding en eventueel een vestje."
-        elif temp > 12:
-            kledingadvies = "🧥 Lange broek en trui of jas."
-        else:
-            kledingadvies = "🧣 Warme jas, sjaal en misschien een muts!"
-
-        st.success(f"In {city} is het nu {temp}°C. {kledingadvies}")
-    else:
-        st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
-
-except Exception as e:
-    st.error(f"Fout bij ophalen van het weer: {e}")
-
-# --- Gedrag selecteren en advies tonen ---
-st.markdown("<hr>", unsafe_allow_html=True)
-st.subheader("📌 Kies een gedrag of situatie:")
-
 keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
 
 if st.button("Toon advies"):
