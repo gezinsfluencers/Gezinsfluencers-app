@@ -37,6 +37,13 @@ st.markdown("""
         font-size: 18px;
         margin-top: 20px;
     }
+    .weertitel {
+    font-size: 36px;
+    font-weight: bold;
+    color: #A61C4B;
+    text-align: center;
+    margin-top: 20px;
+}
 label {
     font-size: 22px;
     font-weight: bold;
