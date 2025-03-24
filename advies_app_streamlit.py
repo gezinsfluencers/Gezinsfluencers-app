@@ -111,7 +111,19 @@ with st.expander("📋 Oudertips & Situaties"):
     tips = {
         "🕰️ Wat is de beste bedtijd voor kinderen?": "Tussen 18:30 – 20:30 uur, afhankelijk van leeftijd. Aanbevolen bedtijd per leeftijd: 0-1 jaar tussen 18:00-19:00, 1-3 jaar tussen 18:30-19:30, 4-6 jaar tussen 19:00-20:00, 7-9 jaar tussen 19:30-20:30, 10-12 jaar tussen 20:00-21:00, 13-16 jaar tussen 21:00-22:00, en vanaf 16 jaar rond 22:00 (maar succes daarmee 😅).<br><br>💡 <b>Tip:</b> Ritme is belangrijker dan het exacte tijdstip.<br><br>😉 <b>Knipoog:</b> Het echte gevecht begint pas bij tandenpoetsen.<br><br>📚 <b>Bron:</b> Nederlands Centrum Jeugdgezondheid (NCJ)",
         "☀️ Hoe overleef je de zomertijd met kids?": "Hard reset: gewoon gelijk naar het nieuwe ritme.<br><br>😉 <b>Knipoog:</b> Kinderen klagen sowieso. Jij wint op doorzettingsvermogen.<br><br>📚 <b>Bron:</b> Positief Opvoeden – Triple P",
-        "🎒 Wat moet er in een weekendtas voor een kind?": "4 outfits (voor 2 dagen)<br>Snacks (voor 3 weken)<br>Knuffel, reserveknuffel, en back-up-deken<br>En natuurlijk... vergeten tandenborstel. Altijd. Mee voor een weekendje weg met je kind: 2-3 setjes kleding, ondergoed en sokken, pyjama, tandenborstel + tandpasta, knuffel, speentje indien nodig, extra set kleding (voor ongelukjes), snacks, drinkbeker, eventueel lievelingsboek of speelgoed, en natuurlijk: een tas vol geduld 😅<br><br>📚 <b>Bron:</b> Ouders van Nu",
+        "🎒 Wat moet er in een weekendtas voor een kind?": "🎒 Wat moet er in een weekendtas voor een kind?": 
+"Een goede voorbereiding helpt om stress te voorkomen bij een logeerpartij of weekendje weg. Dit zijn de belangrijkste items:<br><br>\
+✅ 2-3 setjes kleding (broek, shirt, trui)<br>\
+✅ Ondergoed en sokken (extra meenemen voor ongelukjes)<br>\
+✅ Pyjama of slaapkleding<br>\
+✅ Tandenborstel + tandpasta<br>\
+✅ Knuffel of lievelingsknuffel<br>\
+✅ Eventueel speen of slaapaccessoire<br>\
+✅ Extra set kleding (voor ongelukjes of buiten spelen)<br>\
+✅ Drinkbeker en snacks (indien nodig)<br>\
+✅ Boekje of klein speelgoed<br>\
+✅ Eventuele medicijnen met instructie<br><br>\
+📚 <b>Bron:</b> Ouders van Nu"
         "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken<br>Geef het een toffe naam (‘superheldensaus’)<br>Of… accepteer het. Soms is ketchup ook een groente.<br><br>📚 <b>Bron:</b> Voedingscentrum",
         "🎮 Hoeveel schermtijd is normaal?": "Voor jonge kinderen (2-5 jaar) wordt maximaal 1 uur schermtijd per dag aangeraden, bij voorkeur samen met een ouder; voor kinderen van 6-12 jaar is 1 tot 2 uur per dag passend, met duidelijke afspraken over inhoud, pauzes en balans met offline activiteiten — het belangrijkste blijft: schermtijd bewust inzetten, niet als standaard vervanger voor verveling of contact..<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)<br><br>😉 <b>Knipoog:</b> Max. 1 uur per dag? Alleen haalbaar toen de wifi uitviel.",
         "🍽️ Wat eten we vanavond? (met weinig tijd)": "Pasta + pesto + iets van groenten<br>Soep + tosti = feestmaal<br>Of ontbijt als avondeten = altijd goed bij kinderen<br><br>💡 <b>Tip:</b> Geef het een naam (‘avonturenpasta’) en ze eten het eerder.<br><br>📚 <b>Bron:</b> Gezinsbond",
