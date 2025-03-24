@@ -30,6 +30,7 @@ st.markdown("""
         font-size: 16px;
     }
     .advies-box {
+        margin-bottom: 30px;
         background-color: #F7C5D5;
         border-left: 5px solid #C2185B;
         padding: 20px;
