@@ -90,6 +90,38 @@ adviezen = {
 
     "Heel druk gedrag": {"advies": "🧠 <b>Feit:</b> Veel bewegen hoort bij de ontwikkeling, maar kan soms duiden op behoefte aan prikkelverwerking.<br><br>💡 <b>Tip:</b> Bied beweegmomenten aan én rustmomenten, structuur helpt.<br><br>😉 <b>Knipoog:</b> Springen op de bank = kinderversie van espresso.<br><br>📚 <b>Bron:</b> Balans Digitaal / Hersenstichting"}
 }
+
+# --- Oudertips & Gebeurtenissen ---
+with st.expander("📋 Oudertips & Situaties"):
+    tips = {
+        "🕰️ Wat is de beste bedtijd voor kinderen?": "Tussen 18:30 – 20:30 uur, afhankelijk van leeftijd. Aanbevolen bedtijd per leeftijd: 0-1 jaar tussen 18:00-19:00, 1-3 jaar tussen 18:30-19:30, 4-6 jaar tussen 19:00-20:00, 7-9 jaar tussen 19:30-20:30, 10-12 jaar tussen 20:00-21:00, 13-16 jaar tussen 21:00-22:00, en vanaf 16 jaar rond 22:00 (maar succes daarmee 😅).<br><br>💡 <b>Tip:</b> Ritme is belangrijker dan het exacte tijdstip.<br><br>😉 <b>Knipoog:</b> Het echte gevecht begint pas bij tandenpoetsen.<br><br>📚 <b>Bron:</b> Nederlands Centrum Jeugdgezondheid (NCJ)",
+        "☀️ Hoe overleef je de zomertijd met kids?": "Hard reset: gewoon gelijk naar het nieuwe ritme.<br><br>😉 <b>Knipoog:</b> Kinderen klagen sowieso. Jij wint op doorzettingsvermogen.<br><br>📚 <b>Bron:</b> Positief Opvoeden – Triple P",
+        "🎒 Wat moet er in een weekendtas voor een kind?": "4 outfits (voor 2 dagen)<br>Snacks (voor 3 weken)<br>Knuffel, reserveknuffel, en back-up-deken<br>En natuurlijk... vergeten tandenborstel. Altijd. Mee voor een weekendje weg met je kind: 2-3 setjes kleding, ondergoed en sokken, pyjama, tandenborstel + tandpasta, knuffel, speentje indien nodig, extra set kleding (voor ongelukjes), snacks, drinkbeker, eventueel lievelingsboek of speelgoed, en natuurlijk: een tas vol geduld 😅<br><br>📚 <b>Bron:</b> Ouders van Nu",
+        "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken<br>Geef het een toffe naam (‘superheldensaus’)<br>Of… accepteer het. Soms is ketchup ook een groente.<br><br>📚 <b>Bron:</b> Voedingscentrum",
+        "🎮 Hoeveel schermtijd is normaal?": "Voor jonge kinderen (2-5 jaar) wordt maximaal 1 uur schermtijd per dag aangeraden, bij voorkeur samen met een ouder; voor kinderen van 6-12 jaar is 1 tot 2 uur per dag passend, met duidelijke afspraken over inhoud, pauzes en balans met offline activiteiten — het belangrijkste blijft: schermtijd bewust inzetten, niet als standaard vervanger voor verveling of contact..<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)<br><br>😉 <b>Knipoog:</b> Max. 1 uur per dag? Alleen haalbaar toen de wifi uitviel.",
+        "🍽️ Wat eten we vanavond? (met weinig tijd)": "Pasta + pesto + iets van groenten<br>Soep + tosti = feestmaal<br>Of ontbijt als avondeten = altijd goed bij kinderen<br><br>💡 <b>Tip:</b> Geef het een naam (‘avonturenpasta’) en ze eten het eerder.<br><br>📚 <b>Bron:</b> Gezinsbond",
+        "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": "Label álles (inclusief hun sokken)<br>Reservekleding<br>Duidelijke afspraken over ophalen<br>Mentale voorbereiding op ALLE themaweken<br><br>📚 <b>Bron:</b> Ouders Centraal / NJi",
+        "🎉 Wat is een goede kindertraktatie zonder gedoe?": "Rozijntjes met een wiebel-oogje<br>Rijstwafel met smiley<br>Mini marshmallows in een zakje = feestje<br><br>😉 <b>Knipoog:</b> Ouders blij = missie geslaagd.<br><br>📚 <b>Bron:</b> Gezonde School / Voedingscentrum"
+    }
+    gekozen_tip = st.selectbox("Kies een oudertip of situatie", list(tips.keys()))
+    if st.button("📌 Toon oudertip"):
+        st.components.v1.html("""
+        <script>
+          var audio = window.parent.document.getElementById("muziek");
+          if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Autoplay blocked:", e));
+          }
+        </script>
+        """, height=0)
+        st.markdown(f"<div class='advies-box'><b>{gekozen_tip}</b><br><br>{tips[gekozen_tip]}</div>", unsafe_allow_html=True)
+
+# Extra webshop link
+st.markdown("""
+<div class='webshop-link'>
+    🛍️ <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>Bekijk ook onze webshop voor leuke producten</a>
+</div>
+""", unsafe_allow_html=True)
 import requests
 
 # OpenWeather API instellen
@@ -128,38 +160,6 @@ try:
 
 except Exception as e:
     st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.")
-
-# --- Oudertips & Gebeurtenissen ---
-with st.expander("📋 Oudertips & Situaties"):
-    tips = {
-        "🕰️ Wat is de beste bedtijd voor kinderen?": "Tussen 18:30 – 20:30 uur, afhankelijk van leeftijd. Aanbevolen bedtijd per leeftijd: 0-1 jaar tussen 18:00-19:00, 1-3 jaar tussen 18:30-19:30, 4-6 jaar tussen 19:00-20:00, 7-9 jaar tussen 19:30-20:30, 10-12 jaar tussen 20:00-21:00, 13-16 jaar tussen 21:00-22:00, en vanaf 16 jaar rond 22:00 (maar succes daarmee 😅).<br><br>💡 <b>Tip:</b> Ritme is belangrijker dan het exacte tijdstip.<br><br>😉 <b>Knipoog:</b> Het echte gevecht begint pas bij tandenpoetsen.<br><br>📚 <b>Bron:</b> Nederlands Centrum Jeugdgezondheid (NCJ)",
-        "☀️ Hoe overleef je de zomertijd met kids?": "Hard reset: gewoon gelijk naar het nieuwe ritme.<br><br>😉 <b>Knipoog:</b> Kinderen klagen sowieso. Jij wint op doorzettingsvermogen.<br><br>📚 <b>Bron:</b> Positief Opvoeden – Triple P",
-        "🎒 Wat moet er in een weekendtas voor een kind?": "4 outfits (voor 2 dagen)<br>Snacks (voor 3 weken)<br>Knuffel, reserveknuffel, en back-up-deken<br>En natuurlijk... vergeten tandenborstel. Altijd. Mee voor een weekendje weg met je kind: 2-3 setjes kleding, ondergoed en sokken, pyjama, tandenborstel + tandpasta, knuffel, speentje indien nodig, extra set kleding (voor ongelukjes), snacks, drinkbeker, eventueel lievelingsboek of speelgoed, en natuurlijk: een tas vol geduld 😅<br><br>📚 <b>Bron:</b> Ouders van Nu",
-        "🥦 Wat als mijn kind geen groente eet?": "Verstop het in pannenkoeken<br>Geef het een toffe naam (‘superheldensaus’)<br>Of… accepteer het. Soms is ketchup ook een groente.<br><br>📚 <b>Bron:</b> Voedingscentrum",
-        "🎮 Hoeveel schermtijd is normaal?": "Voor jonge kinderen (2-5 jaar) wordt maximaal 1 uur schermtijd per dag aangeraden, bij voorkeur samen met een ouder; voor kinderen van 6-12 jaar is 1 tot 2 uur per dag passend, met duidelijke afspraken over inhoud, pauzes en balans met offline activiteiten — het belangrijkste blijft: schermtijd bewust inzetten, niet als standaard vervanger voor verveling of contact..<br><br>📚 <b>Bron:</b> Nederlands Jeugdinstituut (NJi)<br><br>😉 <b>Knipoog:</b> Max. 1 uur per dag? Alleen haalbaar toen de wifi uitviel.",
-        "🍽️ Wat eten we vanavond? (met weinig tijd)": "Pasta + pesto + iets van groenten<br>Soep + tosti = feestmaal<br>Of ontbijt als avondeten = altijd goed bij kinderen<br><br>💡 <b>Tip:</b> Geef het een naam (‘avonturenpasta’) en ze eten het eerder.<br><br>📚 <b>Bron:</b> Gezinsbond",
-        "🧳 Wat moet ik regelen als mijn kind naar school/opvang gaat?": "Label álles (inclusief hun sokken)<br>Reservekleding<br>Duidelijke afspraken over ophalen<br>Mentale voorbereiding op ALLE themaweken<br><br>📚 <b>Bron:</b> Ouders Centraal / NJi",
-        "🎉 Wat is een goede kindertraktatie zonder gedoe?": "Rozijntjes met een wiebel-oogje<br>Rijstwafel met smiley<br>Mini marshmallows in een zakje = feestje<br><br>😉 <b>Knipoog:</b> Ouders blij = missie geslaagd.<br><br>📚 <b>Bron:</b> Gezonde School / Voedingscentrum"
-    }
-    gekozen_tip = st.selectbox("Kies een oudertip of situatie", list(tips.keys()))
-    if st.button("📌 Toon oudertip"):
-        st.components.v1.html("""
-        <script>
-          var audio = window.parent.document.getElementById("muziek");
-          if (audio) {
-            audio.currentTime = 0;
-            audio.play().catch(e => console.log("Autoplay blocked:", e));
-          }
-        </script>
-        """, height=0)
-        st.markdown(f"<div class='advies-box'><b>{gekozen_tip}</b><br><br>{tips[gekozen_tip]}</div>", unsafe_allow_html=True)
-
-# Extra webshop link
-st.markdown("""
-<div class='webshop-link'>
-    🛍️ <a href='https://www.gezinsfluencers.nl/cadeau-tips/leuke-producten/' target='_blank'>Bekijk ook onze webshop voor leuke producten</a>
-</div>
-""", unsafe_allow_html=True)
 
 # --- Gedrag selecteren en advies tonen ---
 st.markdown("<hr>", unsafe_allow_html=True)
