@@ -172,8 +172,6 @@ if weer_data:
 else:
     st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.") 
 
-
-
 keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
 
 if st.button("Toon advies"):
