@@ -208,6 +208,7 @@ else:
     st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.") 
     st.write("")  # lege regel
 
+st.markdown("<h2 style='font-size:28px; color:#A61C4B;'>📌 Wat speelt er bij jullie thuis? Kies een gedrag of situatie en krijg direct advies!</h2>", unsafe_allow_html=True)
 
 keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
 
