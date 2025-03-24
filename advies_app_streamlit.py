@@ -193,7 +193,7 @@ if weer_data:
     advies = genereer_kledingadvies(temperatuur)
 
     st.markdown("<hr>", unsafe_allow_html=True)
-    st.subheader("👕 Kledingadvies voor vandaag")
+    st.markdown("<div class='weertitel'>👕 Kledingadvies voor vandaag</div>", unsafe_allow_html=True)
     st.components.v1.html("""
         <script>
           var audio = window.parent.document.getElementById("muziek");
