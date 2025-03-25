@@ -219,7 +219,7 @@ with col1:
         omschrijving = weer_data["weather"][0]["description"]
         st.markdown(f"""
         <div class='advies-box'>
-        📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>
+       st.markdown(f"<div class='advies-box'>📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>", unsafe_allow_html=True)
         👕 <b>Kledingtips:</b> Lange broek en trui. Jas mee voor de zekerheid.
         </div>
         """, unsafe_allow_html=True)
