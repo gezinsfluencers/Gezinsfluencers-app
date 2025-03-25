@@ -209,24 +209,36 @@ if weer_data:
             audio.play().catch(e => console.log("Autoplay blocked:", e));
           }
         </script>
-    """, height=0)
-    st.markdown(f"<div class='advies-box'>📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>👚 <b>Kledingtip:</b> {advies}</div>", unsafe_allow_html=True)
-else:
-    st.error("Kon het weerbericht niet ophalen. Check je internet of API-key.") 
-    st.write("")  # lege regel
+   # Twee kolommen: links kledingadvies, rechts gedragselectie
+col1, col2 = st.columns(2)
 
-st.markdown("<h2 style='font-size:28px; color:#A61C4B;'>📌 Wat speelt er bij jullie thuis? Kies een gedrag of situatie en krijg direct advies!</h2>", unsafe_allow_html=True)
+with col1:
+    st.markdown("<div class='title'>👕 Kledingadvies voor vandaag</div>", unsafe_allow_html=True)
+    try:
+        temperatuur = weer_data["main"]["temp"]
+        omschrijving = weer_data["weather"][0]["description"]
+        st.markdown(f"""
+        <div class='advies-box'>
+        📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>
+        👕 <b>Kledingtips:</b> Lange broek en trui. Jas mee voor de zekerheid.
+        </div>
+        """, unsafe_allow_html=True)
+    except:
+        st.error("Weerdata niet beschikbaar")
 
-keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
+with col2:
+    st.markdown("<div class='title'>📌 Wat speelt er bij jullie thuis?</div>", unsafe_allow_html=True)
+    keuze = st.selectbox("Gedrag of situatie", list(adviezen.keys()))
+    if st.button("Toon advies"):
+        st.components.v1.html("""
+        <script>
+          var audio = window.parent.document.getElementById("muziek");
+          if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Autoplay blocked:", e));
+          }
+        </script>
+        """, height=0)
+        st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
 
-if st.button("Toon advies"):
-    st.components.v1.html("""
-    <script>
-      var audio = window.parent.document.getElementById("muziek");
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch(e => console.log("Autoplay blocked:", e));
-      }
-    </script>
-    """, height=0)
     st.markdown(f"<div class='advies-box'>{adviezen[keuze]['advies']}</div>", unsafe_allow_html=True)
