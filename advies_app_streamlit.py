@@ -218,11 +218,11 @@ with col1:
         temperatuur = weer_data["main"]["temp"]
         omschrijving = weer_data["weather"][0]["description"]
         st.markdown(f"""
-        <div class='advies-box'>
-       st.markdown(f"<div class='advies-box'>📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>", unsafe_allow_html=True)
-        st.markdown("👕 <b>Kledingtips:</b> Lange broek en trui. Jas mee voor de zekerheid.", unsafe_allow_html=True)
-        </div>
-        """, unsafe_allow_html=True)
+    <div class='advies-box'>
+        📍 In {weer_data['name']} is het momenteel <b>{temperatuur}°C</b> met <i>{omschrijving}</i>.<br><br>
+        <b>Kledingtip:</b> 👕 Lange broek en trui. Jas mee voor de zekerheid.
+    </div>
+""", unsafe_allow_html=True)
     except:
         st.error("Weerdata niet beschikbaar")
 
